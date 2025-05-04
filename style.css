@@ -1,0 +1,64 @@
+.H1_sec{
+  height: 1038px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-image: url("/images/main_background.png");
+  background-repeat: no-repeat; /* чтобы не повторялось */
+  background-size: cover; /* растянуть на весь блок */
+  background-position: center; /* выровнять по центру */
+
+  display: flex;
+  justify-content: center; /* по горизонтали */
+  align-items: center;    /* по вертикали */
+
+}
+
+.H1_scroll{
+  max-width: 700px;
+  text-align: center;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%
+}
+.scroll_down{
+  display: flex;
+  align-items: center;       
+  gap: 8px;   
+}
+.product_list{
+  display: flex;
+  justify-content: center;  
+  flex-wrap: wrap;
+  gap: 10px;  
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.reviews_items{
+  display: flex;
+  flex-direction: column;  
+  align-items:center;
+  margin: 0 auto;
+  max-width: 856px;
+  text-align: center;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+}
+.partners{
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+@media (max-width: 810px){
+    
+  .image_main, .product_card_img, .product_card{
+    width: 75%;
+    height: 75%;
+  }
+ 
+  
+} 

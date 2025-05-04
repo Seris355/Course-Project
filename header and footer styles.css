@@ -1,0 +1,76 @@
+body{
+    background-color:black;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .h_items{
+    display: flex;
+    justify-content: space-between;
+  }
+  header{
+    max-width: 1296px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .header{
+    max-width: 1296px;
+  }
+  
+  .h_nav{
+    display: flex;
+    gap: 4vw;
+  }
+  main{
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+
+.f_list{
+    display:flex;
+    justify-content: space-between;
+  }
+  .footer_copy{
+    text-align: center;
+  }
+  footer{
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+  .footer_phone_flex_error{
+    display: flex;
+    flex-direction: column;
+  }
+
+   
+  @media (max-width: 768px){
+
+    .logo_footer{
+      display: none;
+    }
+    footer{
+      font-size: 14px;
+    }
+    .f_list{
+      gap: 3vw;
+    }
+    
+  } 
+
+  @media (max-width: 600px){
+    
+    .h_nav{
+      flex-direction: column;
+      gap: 1vw;
+      
+    }
+    .inst_link{
+      align-self: center;
+    }
+    .logo_header{
+      align-self: center;
+    }
+   
+    
+  } 

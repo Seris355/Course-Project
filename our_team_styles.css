@@ -1,0 +1,16 @@
+.h2_text{
+    text-align: center;
+}
+
+.section_main{
+    max-width: 1296px;
+}
+
+  .masters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1296px; 
+    margin: 0 auto;
+     gap:40px;
+  }
