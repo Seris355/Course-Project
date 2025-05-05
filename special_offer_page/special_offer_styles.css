@@ -2,9 +2,38 @@
     text-align: center;
     max-width: 856px;
     font-family: "Cormorant Garamond";
-font-size: 27px;
-font-style: normal;
-font-weight: 700;
-line-height: 130%;
-margin: 0 auto;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px){
+    .text{
+        font-size: 28px;
+    }
+
+
+    .special_offer p {
+        font-size: 22px;
+        padding:0 30px;
+    }
+
+    .image{
+        width: 70vw;
+    }
+
+
+}
+
+
+@media (max-width: 400px){
+    .special_offer p{
+        line-height:22px;
+        font-size: 20px;
+    }
+    
+
+
 }

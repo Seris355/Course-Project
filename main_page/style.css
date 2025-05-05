@@ -59,11 +59,11 @@
   margin-top:5.12rem;
   display: flex;
   justify-content: space-between;
-  padding: 100px;
+  padding: 50px;
 }
 
 footer{
-  margin-top:4.22rem;
+  margin-top:5.12rem;
 }
 
 @media (max-width: 950px){
@@ -97,7 +97,6 @@ footer{
  }
 
 } 
-
 
 @media (max-width: 768px){
 
@@ -147,4 +146,10 @@ footer{
     line-height: 30px
   }
   
+ } 
+
+@media (max-width: 370px){
+  .product_list{
+    padding: 15px;
+  }
  } 
