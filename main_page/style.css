@@ -102,6 +102,10 @@
     gap:10px;
   }
 
+  .H1_sec{
+    height: 37rem;
+  }
+
  } 
 
 
@@ -110,8 +114,12 @@
  h1{
   font-size: 45px;
   padding: 35px;
+  }
+  .text_main_huge{
+    font-size: 22px;
+    padding: 20px;
+  }
 
-}
 } 
 
 @media (max-width: 320px){
