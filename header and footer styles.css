@@ -2,6 +2,7 @@ body{
     background-color:black;
     color: white;
     font-family: 'Cormorant Garamond', serif;
+    padding: 1rem;
   }
   .h_items{
     display: flex;
@@ -58,7 +59,7 @@ body{
     
   } 
 
-  @media (max-width: 600px){
+  @media (max-width: 700px){
     
     .h_nav{
       flex-direction: column;
@@ -74,3 +75,21 @@ body{
    
     
   } 
+
+  @media (max-width: 320px){
+    
+    body{
+      padding:10px;
+    }
+    .h_nav{
+      gap:10px;
+    }
+
+    .logo_header{
+      max-width: 35px;
+      max-height: 35px;
+    }
+    
+  } 
+
+  

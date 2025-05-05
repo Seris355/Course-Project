@@ -3,14 +3,12 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-image: url("/images/main_background.png");
-  background-repeat: no-repeat; /* чтобы не повторялось */
-  background-size: cover; /* растянуть на весь блок */
-  background-position: center; /* выровнять по центру */
-
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: center; /* по горизонтали */
-  align-items: center;    /* по вертикали */
-
+  justify-content: center;
+  align-items: center;    
 }
 
 .H1_scroll{
@@ -21,11 +19,13 @@
   font-weight: 700;
   line-height: 170%
 }
+
 .scroll_down{
   display: flex;
   align-items: center;       
   gap: 8px;   
 }
+
 .product_list{
   display: flex;
   justify-content: center;  
@@ -53,12 +53,76 @@
   padding: 100px;
 }
 
-@media (max-width: 810px){
+@media (max-width: 950px){
+  h1{
+    font-size: 65px;
+    padding: 50px;
+  }
+ } 
+
+@media (max-width: 900px){
     
-  .image_main, .product_card_img, .product_card{
-    width: 75%;
+  .image_main {
+    width: 100%;
+    height: 100%;
+  }
+  .product_card_img
+  {
+    max-width: 320px;
+    height: 25%;
+  }
+
+  .product_card{
+    max-width: 320px;
     height: 75%;
   }
- 
-  
+
+ .product_list{
+    font-size: 25px;
+    gap:1rem;
+ }
+
 } 
+
+
+@media (max-width: 768px){
+
+  .logo_p{
+    max-width: 320px;
+    height: 25%;
+  }
+
+  .logos_partners{
+    width: 100%;
+    height: 100%;
+  }
+
+  .partners{
+    padding: 25px;
+    gap:10px;
+  }
+
+ } 
+
+
+@media (max-width: 670px){
+
+ h1{
+  font-size: 45px;
+  padding: 35px;
+
+}
+} 
+
+@media (max-width: 320px){
+  .partners{
+    padding: 16px;
+    gap:7px;
+  }
+
+  h1{
+    font-size: 35px;
+    line-height: 30px
+  }
+  
+ } 
