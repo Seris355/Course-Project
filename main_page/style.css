@@ -26,6 +26,13 @@
   gap: 8px;   
 }
 
+.product{
+  margin-top:1.25rem;
+}
+.text_under_product{
+  margin-top:-0.3rem;
+}
+
 .product_list{
   display: flex;
   justify-content: center;  
@@ -41,16 +48,22 @@
   flex-direction: column;  
   align-items:center;
   margin: 0 auto;
-  max-width: 856px;
+  max-width: 850px;
   text-align: center;
   font-size: 27px;
   font-style: normal;
   font-weight: 700;
+  margin-top: -3rem;
 }
 .partners{
+  margin-top:5.12rem;
   display: flex;
   justify-content: space-between;
   padding: 100px;
+}
+
+footer{
+  margin-top:4.22rem;
 }
 
 @media (max-width: 950px){
@@ -76,6 +89,7 @@
     max-width: 320px;
     height: 75%;
   }
+  
 
  .product_list{
     font-size: 25px;

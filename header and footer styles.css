@@ -7,6 +7,7 @@ body{
   .h_items{
     display: flex;
     justify-content: space-between;
+    align-items: center; 
   }
   header{
     max-width: 1296px;
@@ -29,8 +30,11 @@ body{
   }
 
 .f_list{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     display:flex;
     justify-content: space-between;
+    align-items: center;
   }
   .footer_copy{
     text-align: center;
@@ -110,7 +114,7 @@ body{
 }
 
 .burger_toggle:checked + .burger .first_b {
-  transform: rotate(55deg) translate(5px, 5px);
+  transform: rotate(90deg) translate(5px, 5px);
 }
 
 .burger_toggle:checked + .burger .second_b {
@@ -118,7 +122,7 @@ body{
 }
 
 .burger_toggle:checked + .burger .third_b {
-  transform: rotate(-55deg) translate(5px, -5px);
+  transform: rotate(-90deg) translate(5px, -5px);
 }
 
    
