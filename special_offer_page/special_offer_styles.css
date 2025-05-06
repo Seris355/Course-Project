@@ -9,6 +9,10 @@
     margin: 0 auto;
 }
 
+.image{
+    margin-bottom: 5rem;
+}
+
 @media (max-width: 900px){
     .text{
         font-size: 28px;

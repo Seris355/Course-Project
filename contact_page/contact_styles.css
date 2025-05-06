@@ -12,8 +12,10 @@
     gap: 1.5vw;
 }
 
+.image_container{
+    align-self: center;
+}
 .map{
-    
     width: 80vw;
     height: 35.555vw;
     max-width: 1296px;
@@ -23,7 +25,6 @@
 .flex_container_for_main{
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 5rem;
 }
 
@@ -33,6 +34,10 @@
         flex-direction: column;
         justify-content: center;
         margin-top: 1rem;
+    }
+
+    .map{
+        margin-left:0vw;
     }
     .addit_inf{
         margin: 0 auto;
@@ -44,6 +49,13 @@
 
     h3{
         text-align: center;
+    }
+
+    .flex_container_for_main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
     }
  }
 
