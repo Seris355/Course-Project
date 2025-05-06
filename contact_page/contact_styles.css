@@ -1,8 +1,58 @@
 .text{
     text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 38px;
 }
 .flex{
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 1.5vw;
 }
+
+.map{
+    
+    width: 80vw;
+    height: 35.555vw;
+    max-width: 1296px;
+    max-height: 576px;
+}
+
+.flex_container_for_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+
+@media (max-width: 360px){
+    .flex{
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .addit_inf{
+        margin: 0 auto;
+    }
+
+    .contact_info{
+        text-align: center;
+    }
+
+    h3{
+        text-align: center;
+    }
+ }
+
+ @media (max-width: 768px){
+    .text{
+        font-size: 30px;
+    }
+    .flex{
+        gap: 2vw;
+    }
+
+ }
