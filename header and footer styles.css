@@ -19,6 +19,15 @@ body{
   .header{
     max-width: 1296px;
   }
+
+  .hn_link:hover{
+    color:#c70606;
+  }
+
+  .hn_link_active{
+    text-decoration: underline;
+    color:#c70606 !important;
+  }
   
   .h_nav{
     display: flex;
@@ -106,6 +115,10 @@ body{
   border-bottom: 1px solid #4c4b4b;
 }
 
+.dropdown_item:hover{
+  background-color:#c70606;
+}
+
 .dropdown_item img {
   width: 24px;
   height: 24px;
@@ -174,5 +187,6 @@ body{
     }
     
   } 
+
 
   

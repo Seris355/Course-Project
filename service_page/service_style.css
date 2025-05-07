@@ -1,6 +1,5 @@
 .h2_underh{
     text-align: center;
-    font-size: 48px;
     margin-top:5rem;
     margin-bottom: 5rem;
 }
@@ -15,24 +14,24 @@
 .service_price{
     width: 100%;
     margin-top:-2.35rem;
-    
 }
 
 .price{
     margin-left: auto; 
-    white-space: nowrap;
+    
 }
 .price_card1
 {
     display: flex;
     justify-content: space-between;
     gap: 6vw;
-    font-size: 25px;
-    
 }
 
 .services_section{
     padding: 0 1.5rem;
+}
+.price_money{
+    white-space: nowrap;
 }
 
 .price_card2
@@ -41,7 +40,6 @@
     display: flex;
     justify-content: space-between;
     gap: 6vw;
-    font-size: 25px;
 }
 
 .price_card3
@@ -50,7 +48,29 @@
     display: flex;
     justify-content: space-between;
     gap: 6vw;
-    font-size: 25px;
+}
+
+/* font fixes */
+
+.h2_underh{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%
+}
+
+.flex_price{
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%
+}
+
+.services{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%
 }
 
 @media (max-width: 1200px){
@@ -64,17 +84,14 @@
  @media (max-width: 900px){
     .h2_underh{
         text-align: center;
-        font-size: 36px;
         margin-top:5rem;
         margin-bottom: 5rem;
     }
 
     .services{
-        font-size: 18px;
     }
 
     .flex_price{
-        font-size: 24px;
     }
  }
 

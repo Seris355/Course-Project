@@ -1,3 +1,4 @@
+
 .H1_sec{
   height: 1038px;
   width: 100vw;
@@ -14,10 +15,7 @@
 .H1_scroll{
   max-width: 700px;
   text-align: center;
-  font-size: 50px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 170%
 }
 
 .scroll_down{
@@ -38,10 +36,6 @@
   justify-content: center;  
   flex-wrap: wrap;
   gap: 10px;  
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
 }
 .reviews_items{
   display: flex;
@@ -50,26 +44,46 @@
   margin: 0 auto;
   max-width: 850px;
   text-align: center;
-  font-size: 27px;
-  font-style: normal;
-  font-weight: 700;
   margin-top: -3rem;
 }
 .partners{
   margin-top:5.12rem;
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  padding: 0 50px;
 }
 
 footer{
   margin-top:5.12rem;
 }
 
+/* Коррекция шрифтов */
+
+h1{
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.text_main_huge{
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.text_under_product{
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+
 @media (max-width: 950px){
   h1{
-    font-size: 65px;
-    padding: 50px;
+    padding: 0 50px;
   }
  } 
 
@@ -92,7 +106,6 @@ footer{
   
 
  .product_list{
-    font-size: 25px;
     gap:1rem;
  }
 
@@ -111,7 +124,7 @@ footer{
   }
 
   .partners{
-    padding: 25px;
+    padding: 0 25px;
     gap:10px;
   }
 
@@ -119,37 +132,39 @@ footer{
     height: 37rem;
   }
 
+  h1{
+      padding: 35px;
+      font-size: 60px;
+    }
+
  } 
+
+ @media (max-width: 566px){
+  h1{
+    font-size: 50px;
+  }
+} 
 
 
 @media (max-width: 670px){
-
- h1{
-  font-size: 45px;
-  padding: 35px;
-  }
   .text_main_huge{
-    font-size: 22px;
-    padding: 20px;
+    padding: 0 20px;
   }
-
 } 
 
 @media (max-width: 320px){
   .partners{
-    padding: 16px;
+    padding: 0 16px;
     gap:7px;
   }
-
   h1{
-    font-size: 35px;
-    line-height: 30px
+    line-height: 110%;
+    padding: 20px
   }
-  
  } 
 
 @media (max-width: 370px){
   .product_list{
-    padding: 15px;
+    padding: 0 15px;
   }
  } 
