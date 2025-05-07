@@ -52,13 +52,6 @@
 
 /* font fixes */
 
-.h2_underh{
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%
-}
-
 .flex_price{
     font-size: 27px;
     font-style: normal;
@@ -71,6 +64,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%
+}
+ 
+.h2_underh{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%
 }
 
 @media (max-width: 1200px){
