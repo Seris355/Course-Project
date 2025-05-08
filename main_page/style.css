@@ -179,4 +179,53 @@ h1{
     height: 25rem;
   }
 
- } 
+ 
+
+
+ 
+}
+
+header {
+  transform: translateY(-132%);
+  animation: headerSlideIn 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes headerSlideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.idk_image{
+  animation: 
+    shake 4s ease-in-out 3;
+    animation-delay: 0s, 15s;
+  
+  animation-iteration-count: infinite;
+ }
+
+@keyframes shake {
+  25% {
+      transform: rotate(10deg); 
+  }
+  50% {
+      transform: rotate(-10deg); 
+  }
+  75% {
+      transform: rotate(5deg);
+  }
+  100% {
+      transform: rotate(0deg); 
+  }
+}
+
+.product_card:hover{
+  transition: transform 0.3s ease; 
+  transform: scale(1.03); 
+  
+}
+  

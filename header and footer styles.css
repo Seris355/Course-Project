@@ -201,15 +201,13 @@ body{
   transform: scale(1.05); 
 }
 
-
-
 .logo_header {
   transition: transform 0.5s ease; 
   display: inline-block; 
 }
 
 .logo_header:hover {
-  animation: shake 1s ease-in-out infinite; 
+  animation: shake 1s ease-in-out 3; 
 }
 
 @keyframes shake {
@@ -226,4 +224,17 @@ body{
       transform: rotate(0deg); 
   }
 }
+
+.logo_footer{
+  animation: shake 2s ease-in-out infinite; 
+}
+
+.footer_inst:hover{
+  transition: transform 0.3s ease; 
+  transform: scale(1.05); 
   
+}
+
+
+
+
