@@ -16,6 +16,9 @@ body{
     font-style: normal;
     font-weight: 600;
   }
+
+
+
   .header{
     max-width: 1296px;
   }
@@ -98,10 +101,11 @@ body{
   display: none;
   position: absolute;
   right: 0;
-  top: 80px;
+  top: 75px;
   background: rgb(22, 22, 22);
   padding: 15px;
   margin-left:-10px;
+  z-index: 100;
 }
 
 .burger_toggle:checked ~ .burger_dropdown {
@@ -189,4 +193,37 @@ body{
   } 
 
 
+
+
+
+.header_inst:hover {
+  transition: transform 0.3s ease; 
+  transform: scale(1.05); 
+}
+
+
+
+.logo_header {
+  transition: transform 0.5s ease; 
+  display: inline-block; 
+}
+
+.logo_header:hover {
+  animation: shake 1s ease-in-out infinite; 
+}
+
+@keyframes shake {
+  25% {
+      transform: rotate(10deg); 
+  }
+  50% {
+      transform: rotate(-10deg); 
+  }
+  75% {
+      transform: rotate(5deg);
+  }
+  100% {
+      transform: rotate(0deg); 
+  }
+}
   
