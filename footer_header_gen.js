@@ -6,14 +6,14 @@ document.getElementById('header-container').innerHTML = `
         <nav class="h_nav">
             <a href="/main_page/main.html" class="hn_link_active">Главная</a>
             <a href="/our_team_page/our_team.html" class="hn_link">Мастера</a>
-            <a href="/service_page/service.html" class="hn_link">Косметика</a>
+            <a href="/service_page/service.html" class="hn_link">Стрижки</a>
         </nav>
 
         <img src="/images_foote_header/logo.svg" alt="logo picture" class="logo_header">
 
         <nav class="h_nav">
-            <a href="/special_offer_page/special_offer.html" class="hn_link">Акции</a>
-            <a href="#" class="hn_link">Покупки</a>
+            <a href="/shop_page/shop.html" class="hn_link">Каталог</a>
+            <a href="/busket_page/busket.html" class="hn_link">Корзина</a>
             <a href="/contact_page/contact.html" class="hn_link">Контакты</a>
         </nav>
         
@@ -38,10 +38,6 @@ document.getElementById('header-container').innerHTML = `
                 <div class="dropdown_item">
                     <img src="/images_foote_header/sun-moon.svg" alt="color change">
                     <span>Сменить цветовую тему</span>
-                </div>
-                <div class="dropdown_item">
-                    <img src="/images_foote_header/shopping-cart.svg" alt="chest">
-                    <span>Корзина</span>
                 </div>
                 <div class="dropdown_item">
                     <img src="/images_foote_header/heart.svg" alt="favorite">
