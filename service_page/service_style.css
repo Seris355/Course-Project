@@ -31,6 +31,10 @@
     padding: 0 1.5rem;
     margin-bottom: 5rem;
 }
+
+.services_section img{
+    border-radius: 10px;
+}
 .price_money{
     white-space: nowrap;
 }
@@ -67,7 +71,7 @@
     line-height: 130%
 }
  
-.h2_underh{
+.h2_underh {
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -105,3 +109,136 @@
         margin: 0 auto;
     }
  }
+
+
+
+
+.img1.element-animation, 
+.img3.element-animation
+{
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.img1.element-animation.element-show,
+.img3.element-animation.element-show
+{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+
+.service_price1.element-animation,
+.service_price3.element-animation
+{
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.service_price1.element-animation.element-show,
+.service_price3.element-animation.element-show
+{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.img2.element-animation.element-show
+{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+.img2.element-animation
+{
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.service_price2.element-animation
+{
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.service_price2.element-animation.element-show
+{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* .price_card1.element-animation:nth-of-type(1).element-show{
+    
+}
+
+.master_container.element-animation:nth-of-type(3).element-show{
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.master_container.element-animation:nth-of-type(4).element-show{
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.master_container.element-animation:nth-of-type(5).element-show{
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.master_container.element-animation:nth-of-type(6).element-show{
+  -webkit-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+} */
