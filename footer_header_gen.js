@@ -46,6 +46,16 @@ document.getElementById('header-container').innerHTML = `
             </div>
         </div>
     </div>
+    <div class="header_second_line">
+      <nav class="h_nav">
+            <img src="/images_foote_header/eye.svg" alt="icon blind">
+            <img src="/images_foote_header/globe.svg" alt="translate">
+        </nav>
+        <nav class="h_nav">
+            <img src="/images_foote_header/sun-moon.svg" alt="color change">
+            <img src="/images_foote_header/heart.svg" alt="favorite">
+        </nav>
+    </div>
     <hr>
 `;
 

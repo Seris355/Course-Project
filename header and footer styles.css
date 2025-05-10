@@ -59,6 +59,16 @@ body{
     display: flex;
     flex-direction: column;
   }
+  .header_second_line{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+   .header_second_line img{
+    filter: invert(1);
+  }
 
 .burger_toggle {
   display: none;
