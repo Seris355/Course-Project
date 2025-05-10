@@ -6,7 +6,10 @@ const bottom = document.getElementById("bottom");
 
 let currentSlideIndex = 0;
 const paginationCircles = [];
-const sliderWidth = slider.clientWidth;
+
+function updateSliderWidth() {
+    return slider.clientWidth;
+}
 
 function createPaginationCircle() {
     const div = document.createElement("div");
@@ -32,7 +35,8 @@ function removeActiveClass() {
 }
 
 function showSlide() {
-    slider.style.transform = `translateX(-${currentSlideIndex * sliderWidth}px)`;
+    const slideWidth = updateSliderWidth();
+    slider.style.transform = `translateX(-${currentSlideIndex * slideWidth}px)`;
 }
 
 function changeSlide(slideIndex) {
@@ -57,6 +61,10 @@ function previousSlide() {
     }
     changeSlide(newSlideIndex);
 }
+
+window.addEventListener('resize', function() {
+    showSlide();
+});
 
 addPagination();
 arrowLeft.addEventListener("click", previousSlide);
