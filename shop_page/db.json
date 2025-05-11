@@ -7,7 +7,7 @@
       "category": "Face",
       "description": "Крем-пудра с тонирующим эффектом",
       "rating": 4.5,
-      "pass": "/shop_images/prod1.jpg"
+      "pass": "shop_images/prod1.jpg"
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "category": "Face",
       "description": "Осветляющая сыворотка с антиоксидантным действием",
       "rating": 4.6,
-      "pass": "/shop_images/prod2.png"
+      "pass": "shop_images/prod2.png"
     },
     {
       "id": "3",
@@ -25,7 +25,7 @@
       "category": "Face",
       "description": "Очищающий бальзам",
       "rating": 4.7,
-      "pass": "/shop_images/prod3.png"
+      "pass": "shop_images/prod3.png"
     },
     {
       "id": "4",
@@ -34,7 +34,7 @@
       "category": "Face",
       "description": "Крем с фитоклетками",
       "rating": 4.5,
-      "pass": "/shop_images/prod4.png"
+      "pass": "shop_images/prod4.png"
     },
     {
       "id": "5",
@@ -43,7 +43,7 @@
       "category": "Face",
       "description": "Омолаживающий концентрат",
       "rating": 4.4,
-      "pass": "/shop_images/prod5.png"
+      "pass": "shop_images/prod5.png"
     },
     {
       "id": "6",
@@ -52,7 +52,7 @@
       "category": "Face",
       "description": "Активный омолаживающий ночной крем",
       "rating": 4.9,
-      "pass": "/shop_images/prod6.png"
+      "pass": "shop_images/prod6.png"
     },
     {
       "id": "7",
@@ -61,7 +61,7 @@
       "category": "Face",
       "description": "Набор Vitamin C Сыворотка-бустер + Пенка для умывания",
       "rating": 4.6,
-      "pass": "/shop_images/prod7.jpg"
+      "pass": "shop_images/prod7.jpg"
     },
     {
       "id": "8",
@@ -70,7 +70,7 @@
       "category": "Face",
       "description": "Молочко для снятия макияжа",
       "rating": 4.2,
-      "pass": "/shop_images/prod8.png"
+      "pass": "shop_images/prod8.png"
     },
     {
       "id": "9",
@@ -79,7 +79,7 @@
       "category": "Body",
       "description": "Крем для тела придающий сияние с омолаживающим действием",
       "rating": 4.6,
-      "pass": "/shop_images/prod9.png"
+      "pass": "shop_images/prod9.png"
     },
     {
       "id": "10",
@@ -88,7 +88,7 @@
       "category": "Body",
       "description": "Гель для интимной гигиены для детей",
       "rating": 4.5,
-      "pass": "/shop_images/prod10.png"
+      "pass": "shop_images/prod10.png"
     },
     {
       "id": "11",
@@ -97,7 +97,7 @@
       "category": "Body",
       "description": "Смягчающий гель для душа Фисташка",
       "rating": 4.2,
-      "pass": "/shop_images/prod11.png"
+      "pass": "shop_images/prod11.png"
     },
     {
       "id": "12",
@@ -106,7 +106,7 @@
       "category": "Body",
       "description": "Бурлящие шары для ванн Снеговичок",
       "rating": 4.8,
-      "pass": "/shop_images/prod12.png"
+      "pass": "shop_images/prod12.png"
     },
     {
       "id": "13",
@@ -115,7 +115,7 @@
       "category": "Body",
       "description": "Крем для тела Какао с зефирками",
       "rating": 3.9,
-      "pass": "/shop_images/prod13.png"
+      "pass": "shop_images/prod13.png"
     },
     {
       "id": "14",
@@ -124,7 +124,7 @@
       "category": "Body",
       "description": "Лосьон для тела Аргания",
       "rating": 4.9,
-      "pass": "/shop_images/prod14.png"
+      "pass": "shop_images/prod14.png"
     },
     {
       "id": "15",
@@ -133,7 +133,7 @@
       "category": "Body",
       "description": "Смягчающий крем после загара лица и тела",
       "rating": 4.9,
-      "pass": "/shop_images/prod15.png"
+      "pass": "shop_images/prod15.png"
     },
     {
       "id": "16",
@@ -142,7 +142,7 @@
       "category": "Body",
       "description": "Освежающий гель для душа",
       "rating": 4.6,
-      "pass": "/shop_images/prod16.png"
+      "pass": "shop_images/prod16.png"
     },
     {
       "id": "17",
@@ -151,7 +151,7 @@
       "category": "Make up",
       "description": "BB-крем с гиалуроновой кислотой",
       "rating": 4.8,
-      "pass": "/shop_images/prod17.jpg"
+      "pass": "shop_images/prod17.jpg"
     },
     {
       "id": "18",
@@ -160,7 +160,7 @@
       "category": "Make up",
       "description": "Помада-бальзам для губ",
       "rating": 4.6,
-      "pass": "/shop_images/prod18.png"
+      "pass": "shop_images/prod18.png"
     },
     {
       "id": "19",
@@ -169,7 +169,7 @@
       "category": "Make up",
       "description": "Помада матовая жидкая",
       "rating": 4.4,
-      "pass": "/shop_images/prod19.png"
+      "pass": "shop_images/prod19.png"
     },
     {
       "id": "20",
@@ -178,7 +178,7 @@
       "category": "Make up",
       "description": "Карандаш для губ",
       "rating": 4.5,
-      "pass": "/shop_images/prod20.png"
+      "pass": "shop_images/prod20.png"
     },
     {
       "id": "21",
@@ -187,7 +187,7 @@
       "category": "Make up",
       "description": "Блеск для губ тон 005",
       "rating": 4.6,
-      "pass": "/shop_images/prod21.png"
+      "pass": "shop_images/prod21.png"
     },
     {
       "id": "22",
@@ -196,7 +196,7 @@
       "category": "Make up",
       "description": "Блеск для губ тон 601 CAMEO",
       "rating": 4.9,
-      "pass": "/shop_images/prod22.png"
+      "pass": "shop_images/prod22.png"
     },
     {
       "id": "23",
@@ -205,7 +205,7 @@
       "category": "Make up",
       "description": "Лак для объема волос сильной фиксации",
       "rating": 4.8,
-      "pass": "/shop_images/prod23.png"
+      "pass": "shop_images/prod23.png"
     },
     {
       "id": "24",
@@ -214,7 +214,7 @@
       "category": "Hairs",
       "description": "Набор для тщательного очищения кожи головы",
       "rating": 4.7,
-      "pass": "/shop_images/prod24.png"
+      "pass": "shop_images/prod24.png"
     },
     {
       "id": "25",
@@ -223,7 +223,7 @@
       "category": "Hairs",
       "description": "Активатор окрашивания волос",
       "rating": 4.7,
-      "pass": "/shop_images/prod25.png"
+      "pass": "shop_images/prod25.png"
     },
     {
       "id": "26",
@@ -232,7 +232,7 @@
       "category": "Hairs",
       "description": "Кондиционер для волос",
       "rating": 4.4,
-      "pass": "/shop_images/prod26.png"
+      "pass": "shop_images/prod26.png"
     },
     {
       "id": "27",
@@ -241,7 +241,7 @@
       "category": "Hairs",
       "description": "Расческа для волос",
       "rating": 4.5,
-      "pass": "/shop_images/prod27.png"
+      "pass": "shop_images/prod27.png"
     },
     {
       "id": "28",
@@ -250,7 +250,7 @@
       "category": "Hairs",
       "description": "Восстанавливающее масло для волос",
       "rating": 4.5,
-      "pass": "/shop_images/prod28.png"
+      "pass": "shop_images/prod28.png"
     },
     {
       "id": "29",
@@ -259,7 +259,7 @@
       "category": "Hairs",
       "description": "Набор для жирной и проблемной кожи головы",
       "rating": 4.0,
-      "pass": "/shop_images/prod29.png"
+      "pass": "shop_images/prod29.png"
     },
     {
       "id": "30",
@@ -268,7 +268,7 @@
       "category": "Hairs",
       "description": "Крем-краска для волос тонирующая безаммиачная",
       "rating": 4.8,
-      "pass": "/shop_images/prod30.png"
+      "pass": "shop_images/prod30.png"
     }
   ]
 }

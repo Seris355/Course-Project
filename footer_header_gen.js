@@ -16,6 +16,8 @@ document.getElementById('header-container').innerHTML = `
             <a href="/busket_page/busket.html" class="hn_link">Корзина</a>
             <a href="/contact_page/contact.html" class="hn_link">Контакты</a>
         </nav>
+
+        <img src="/images_foote_header/contact-round.svg" alt="logo picture" class="header_profile_icon">
         
         <div class="burger_container">
             <input type="checkbox" id="burger_toggle_id" class="burger_toggle">
@@ -28,30 +30,31 @@ document.getElementById('header-container').innerHTML = `
         
             <div class="burger_dropdown">
                 <div class="dropdown_item">
-                    <img src="/images_foote_header/eye.svg" alt="icon blind">
-                    <span>Версия для слабовидящих</span>
+                    <a href="/main_page/main.html" class="hn_link_active">Главная</a>
                 </div>
                 <div class="dropdown_item">
-                    <img src="/images_foote_header/globe.svg" alt="translate">
-                    <span>Перевод страницы на английский</span>
+                    <a href="/our_team_page/our_team.html" class="hn_link">Мастера</a>
                 </div>
                 <div class="dropdown_item">
-                    <img src="/images_foote_header/sun-moon.svg" alt="color change">
-                    <span>Сменить цветовую тему</span>
+                    <a href="/service_page/service.html" class="hn_link">Стрижки</a>
                 </div>
                 <div class="dropdown_item">
-                    <img src="/images_foote_header/heart.svg" alt="favorite">
-                    <span>Избранное</span>
+                    <a href="/shop_page/shop.html" class="hn_link">Каталог</a>
+                </div>
+                <div class="dropdown_item">
+                    <a href="/contact_page/contact.html" class="hn_link">Контакты</a>
+                </div>
+                <div class="dropdown_item">
+                    <a href="/busket_page/busket.html" class="hn_link">Корзина</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="header_second_line">
-      <nav class="h_nav">
+      <nav class="h_nav_2">
             <img src="/images_foote_header/eye.svg" alt="icon blind">
             <img src="/images_foote_header/globe.svg" alt="translate">
-        </nav>
-        <nav class="h_nav">
+            <img src="/images_foote_header/contact-round.svg" alt="logo picture" class="header_profile_icon_2">
             <img src="/images_foote_header/sun-moon.svg" alt="color change">
             <img src="/images_foote_header/heart.svg" alt="favorite">
         </nav>
