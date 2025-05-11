@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+     <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kursavik</title>
+    <link rel="stylesheet" href="/loader_style.css">
+    <link rel="stylesheet" href="/normalise_css.css">
+    <link rel="stylesheet" href="regis_and_aut.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Регистрация</h1>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="fio">ФИО <span class="required">*</span></label>
+                <input type="text" id="fio" name="fio" required>
+                <div class="error" id="fioError"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон (РБ) <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+375XXXXXXXXX" required>
+                <div class="error" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Дата рождения <span class="required">*</span></label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <div class="error" id="birthdateError"></div>
+            </div>
+            <div class="form-group">
+                <label>Способ задания пароля <span class="required">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="manualPassword" name="passwordType" value="manual" checked>
+                    <label for="manualPassword">Ввести вручную</label>
+                    <input type="radio" id="autoPassword" name="passwordType" value="auto">
+                    <label for="autoPassword">Сгенерировать автоматически</label>
+                </div>
+                <div id="manualPasswordFields">
+                    <input type="password" id="password" name="password" placeholder="Пароль" required>
+                    <div class="error" id="passwordError"></div>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
+                    <div class="error" id="confirmPasswordError"></div>
+                </div>
+                <div id="autoPasswordField" style="display: none;">
+                    <input type="text" id="generatedPassword" name="generatedPassword" readonly>
+                    <button type="button" id="copyPassword">Копировать</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nickname">Никнейм</label>
+                <div class="nickname-group">
+                    <input type="text" id="nickname" name="nickname" readonly>
+                    <button type="button" id="generateNickname">Сгенерировать</button>
+                </div>
+                <div class="error" id="nicknameError"></div>
+                <div id="nicknameAttempts" style="display: none;">Осталось попыток: <span id="attemptsCount">5</span></div>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">Я прочитал и согласен с <a href="#">Соглашением пользователя</a> <span class="required">*</span></label>
+                <div class="error" id="agreementError"></div>
+            </div>
+            <button type="submit" id="registerBtn" class="btn" disabled>Зарегистрироваться</button>
+        </form>
+        <div class="links">
+            <a href="/authorization_page/aut.html">Уже есть аккаунт? Войти</a>
+        </div>
+    </div>
+    <script src="api.js"></script>
+    <script src="regis.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+body {
+    background-color: #0a0101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 1920px;
+    padding: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 0;
+    line-height: 130%;
+}
+
+.auth-container, .register-container {
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 8px;
+    width: 50vw;
+    font-family: Cormorant;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: rgb(153, 14, 14);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #c23701;
+}
+
+.btn {
+    width: 102.3%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #b5351c;
+}
+
+.btn:disabled {
+    background-color: #9f9f9f;
+    cursor: not-allowed;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #b02c2c;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: rgb(182, 11, 11);
+    font-size: 14px;
+    margin-top: 5px;
+    height: 18px;
+}
+
+.error-message {
+    color: rgb(180, 17, 17);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nickname-group {
+    display: flex;
+    gap: 10px;
+}
+
+.nickname-group input {
+    flex-grow: 1;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+#autoPasswordField {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#autoPasswordField input {
+    flex-grow: 1;
+}
+
+#autoPasswordField button {
+    padding: 0 15px;
+    background-color: #e7e7e7;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#autoPasswordField button:hover {
+    background-color: #e0e0e0;
+}
