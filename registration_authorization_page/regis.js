@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
             const form = document.getElementById('registerForm');
             const fioInput = document.getElementById('fio');
             const phoneInput = document.getElementById('phone');
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const confirmPasswordError = document.getElementById('confirmPasswordError');
             const nicknameError = document.getElementById('nicknameError');
             const agreementError = document.getElementById('agreementError');
-
+            
             let nicknameAttemptsLeft = 5;
             let isGeneratedPassword = false;
             
@@ -248,29 +249,47 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            form.addEventListener('submit', function(e) {
+           form.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                
                 if (validateForm()) {
-
-                    alert('Форма успешно отправлена!');
-                    console.log({
+                    const formData = {
+                        id: Date.now(),
                         fio: fioInput.value,
-                        phone: phoneInput.value,
-                        email: emailInput.value,
-                        birthdate: birthdateInput.value,
+                        nickname: nicknameInput.value,
                         password: passwordInput.value,
-                        nickname: nicknameInput.value
-                    });
-                    
-                    form.reset();
-                    generatedPasswordContainer.style.display = 'none';
-                    nicknameAttemptsLeft = 5;
-                    attemptsCount.textContent = nicknameAttemptsLeft;
-                    nicknameAttempts.style.display = 'none';
-                    nicknameInput.readOnly = true;
-                    generateNicknameBtn.disabled = false;
-                    registerBtn.disabled = true;
+                        phone: phoneInput.value,
+                        birthdate: birthdateInput.value,
+                        email: emailInput.value,
+                        registrationDate: new Date().toISOString()
+                    };
+
+                    try {
+                        const response = await fetch('http://localhost:3000/users', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        });
+
+                        if (response.ok) {
+                            console.log('Перенаправление на /aut.html');
+                            form.reset();
+                            generatedPasswordContainer.style.display = 'none';
+                            nicknameAttemptsLeft = 5;
+                            attemptsCount.textContent = nicknameAttemptsLeft;
+                            nicknameAttempts.style.display = 'none';
+                            nicknameInput.readOnly = true;
+                            generateNicknameBtn.disabled = false;
+                            registerBtn.disabled = true;
+                            window.location.href = './aut.html'; 
+                        } else {
+                            const errorData = await response.json();
+                            console.error('Ошибка сервера:', errorData);
+                        }
+                    } catch (error) {
+                        console.error('Ошибка:', error);
+                    }
                 }
             });
 

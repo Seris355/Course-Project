@@ -1,5 +1,4 @@
-{
-  "products": [
+"products": [
     {
       "id": "1",
       "name": "Cover-Age 3.0 Medium SPF50+",
@@ -271,4 +270,5 @@
       "pass": "shop_images/prod30.png"
     }
   ]
-}
+  
+  
