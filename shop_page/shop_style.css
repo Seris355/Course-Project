@@ -1,0 +1,171 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.catalog {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.filter-group select, 
+.filter-group input {
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.search-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.search-container input {
+    flex-grow: 1;
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.range-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+.range-inputs input {
+    width: 70px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background-color: #111;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.product-category {
+    display: inline-block;
+    background-color: #333;
+    color: #ccc;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 5px;
+}
+
+.product-rating {
+    color: orange;
+    font-weight: bold;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: orange;
+    color: black;
+    border-color: orange;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .pagination {
+        display: none;
+    }
+}

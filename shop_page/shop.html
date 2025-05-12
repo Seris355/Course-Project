@@ -23,8 +23,57 @@
         <div class="loader"></div>
     </div>
     <header id="header-container" class="header"></header>
-    <main class="main">
-      
+    <main class="catalog">
+        <section class="filters">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Поиск...">
+                <button id="search-btn">Найти</button>
+            </div>
+            
+            <div class="filter-group">
+                <label for="category-filter">Категория:</label>
+                <select id="category-filter">
+                    <option value="">Все</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="price-range">Цена:</label>
+                <div class="range-inputs">
+                    <input type="number" id="price-min" placeholder="От" min="0">
+                    <input type="number" id="price-max" placeholder="До" min="0">
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <label for="rating-filter">Рейтинг:</label>
+                <select id="rating-filter">
+                    <option value="0">Любой</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                    <option value="4.5">4.5+</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="sort-by">Сортировка:</label>
+                <select id="sort-by">
+                    <option value="">По умолчанию</option>
+                    <option value="name_asc">А-Я</option>
+                    <option value="name_desc">Я-А</option>
+                    <option value="price_asc">Дешевые</option>
+                    <option value="price_desc">Дорогие</option>
+                </select>
+            </div>
+        </section>
+        
+        <section class="products-container">
+            <div class="products-grid" id="products-grid"></div>
+            <div class="no-results" id="no-results" style="display: none;">
+                <p>Товары не найдены</p>
+            </div>
+            <div class="pagination" id="pagination"></div>
+        </section>
     </main>
     <script src="shop.js"></script>
     <footer id="footer-container" class="footer"></footer>
