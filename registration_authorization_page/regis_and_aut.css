@@ -1,6 +1,6 @@
 
 body {
-    background-color: #0a0101;
+    background-color: #2a2828;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +9,8 @@ body {
     padding: 20px;
     font-size: 16px;
     font-style: normal;
-    font-weight: 0;
     line-height: 130%;
+        font-family: Cormorant;
 }
 
 .auth-container, .register-container {
@@ -18,7 +18,6 @@ body {
     padding: 30px;
     border-radius: 8px;
     width: 50vw;
-    font-family: Cormorant;
     color: white;
 }
 
@@ -34,7 +33,6 @@ h1 {
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
 .required {
@@ -50,7 +48,6 @@ input[type="date"] {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 16px;
 }
 
 input:focus {
@@ -61,7 +58,6 @@ input:focus {
 .btn {
     width: 102.3%;
     padding: 12px;
-
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -112,7 +108,6 @@ input:focus {
 }
 
 .radio-group label {
-    font-weight: normal;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -120,6 +115,7 @@ input:focus {
 
 .nickname-group {
     display: flex;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -131,30 +127,4 @@ input:focus {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.checkbox-group label {
-    font-weight: normal;
-}
-
-#autoPasswordField {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-#autoPasswordField input {
-    flex-grow: 1;
-}
-
-#autoPasswordField button {
-    padding: 0 15px;
-    background-color: #e7e7e7;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#autoPasswordField button:hover {
-    background-color: #e0e0e0;
 }

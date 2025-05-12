@@ -28,7 +28,7 @@
                 <div class="error" id="fioError"></div>
             </div>
             <div class="form-group">
-                <label for="phone">Телефон (РБ) <span class="required">*</span></label>
+                <label for="phone">Телефон <span class="required">*</span></label>
                 <input type="tel" id="phone" name="phone" placeholder="+375XXXXXXXXX" required>
                 <div class="error" id="phoneError"></div>
             </div>
@@ -42,23 +42,18 @@
                 <input type="date" id="birthdate" name="birthdate" required>
                 <div class="error" id="birthdateError"></div>
             </div>
-            <div class="form-group">
-                <label>Способ задания пароля <span class="required">*</span></label>
-                <div class="radio-group">
-                    <input type="radio" id="manualPassword" name="passwordType" value="manual" checked>
-                    <label for="manualPassword">Ввести вручную</label>
-                    <input type="radio" id="autoPassword" name="passwordType" value="auto">
-                    <label for="autoPassword">Сгенерировать автоматически</label>
+             <div class="form-group password-group">
+                <label for="password">Пароль <span class="required">*</span></label>
+                <div class="password-row">
+                    <input type="password" id="password" name="password" placeholder="Пароль (8-20 символов)" required>
+                    <button type="button" id="generatePassword" class="btn-generate">Сгенерировать</button>
                 </div>
-                <div id="manualPasswordFields">
-                    <input type="password" id="password" name="password" placeholder="Пароль" required>
-                    <div class="error" id="passwordError"></div>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
-                    <div class="error" id="confirmPasswordError"></div>
-                </div>
-                <div id="autoPasswordField" style="display: none;">
-                    <input type="text" id="generatedPassword" name="generatedPassword" readonly>
-                    <button type="button" id="copyPassword">Копировать</button>
+                <div class="error" id="passwordError"></div>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
+                <div class="error" id="confirmPasswordError"></div>
+                <div id="generatedPasswordContainer" style="display: none;">
+                    <div id="generatedPassword"></div>
+                    <button type="button" id="copyPassword">Копировать пароль</button>
                 </div>
             </div>
             <div class="form-group">
