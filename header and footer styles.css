@@ -146,6 +146,7 @@ body{
   filter: invert(1); 
 }
 
+
 .burger_toggle:checked + .burger .first_b {
   transform: rotate(180deg) translate(5px, 5px);
 }
@@ -161,6 +162,8 @@ body{
 .burger_container{
   Display:none;
 }
+
+
 .header_profile_icon{
   filter: invert(1);
 }
@@ -168,6 +171,9 @@ body{
 .header_profile_icon_2{
   Display:none;
   filter: invert(1);
+}
+.header_profile_icon_2_link{
+    Display:none;
 }
 
 .header_second_line{
@@ -208,13 +214,19 @@ body{
     .burger_dropdown {
       top: 110px;
     }
-        .header_profile_icon{
+    .header_profile_icon{
       display: none;
     }
-    .header_profile_icon_2{
+    .header_profile_icon_link{
+      Display:none;
+    }
+    .header_profile_icon_2,
+    .header_profile_icon_2_link
+    {
       display: block;
     }
-        .burger_container{
+    
+    .burger_container{
       Display:block;
     }
     .header_second_line{

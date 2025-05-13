@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             showError('Введите пароль');
             return;
         }
-        
         try {
             const response = await fetch('http://localhost:3000/users');
             const users = await response.json();
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const user = users.find(u => u.nickname === login && u.password === password);
             
             if (user) {
-                sessionStorage.setItem('currentUser', JSON.stringify({
+                localStorage.setItem('currentUser', JSON.stringify({
                     id: user.id,
                     nickname: user.nickname,
                     fio: user.fio,

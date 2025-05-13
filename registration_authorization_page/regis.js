@@ -260,7 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         phone: phoneInput.value,
                         birthdate: birthdateInput.value,
                         email: emailInput.value,
-                        registrationDate: new Date().toISOString()
+                        registrationDate: new Date().toISOString(),
+                        favorite: []
                     };
 
                     try {

@@ -16,9 +16,8 @@ document.getElementById('header-container').innerHTML = `
             <a href="/busket_page/busket.html" class="hn_link">Корзина</a>
             <a href="/contact_page/contact.html" class="hn_link">Контакты</a>
         </nav>
-
-        <img src="/images_foote_header/contact-round.svg" alt="logo picture" class="header_profile_icon">
-        
+            <a href="/registration_authorization_page/aut.html" class="header_profile_icon_link"><img src="/images_foote_header/log-out.svg" alt="logo picture" class="header_profile_icon"></a>
+            
         <div class="burger_container">
             <input type="checkbox" id="burger_toggle_id" class="burger_toggle">
             
@@ -54,18 +53,19 @@ document.getElementById('header-container').innerHTML = `
       <nav class="h_nav_2">
             <img src="/images_foote_header/eye.svg" alt="icon blind">
             <img src="/images_foote_header/globe.svg" alt="translate">
-            <img src="/images_foote_header/contact-round.svg" alt="logo picture" class="header_profile_icon_2">
+            <a href="/registration_authorization_page/aut.html" class="header_profile_icon_2_link"><img src="/images_foote_header/log-out.svg" alt="logo picture" class="header_profile_icon_2"></a>
             <img src="/images_foote_header/sun-moon.svg" alt="color change">
             <img src="/images_foote_header/heart.svg" alt="favorite">
         </nav>
     </div>
     <hr>
+
 `;
 
 document.getElementById('footer-container').innerHTML = `
     <hr>
     <ul class="f_list">
-        <li class="logo_footer"><a href="main.html"><img src="/images_foote_header/logo2.svg" alt="logo footer"></a></li>
+        <li class="logo_footer"><a href="/main_page/main.html"><img src="/images_foote_header/logo2.svg" alt="logo footer"></a></li>
         <li>
             <h2>Контакты</h2>
             <div class="footer_phone_flex_error">
@@ -87,4 +87,5 @@ document.getElementById('footer-container').innerHTML = `
     </ul>
     <hr>
     <p class="footer_copy">Copyright © 2017 - 2022</p>
+    
 `;
