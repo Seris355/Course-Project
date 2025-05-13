@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const API_URL = 'http://localhost:3000/products';
+    const USERS_URL = 'http://localhost:3000/users';
+    const ORDERS_URL = 'http://localhost:3000/orders';
     const ITEMS_PER_PAGE = 8;
     
     const productsGrid = document.getElementById('products-grid');
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 1;
     let totalProducts = 0;
     let categories = [];
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     
     init();
     
@@ -110,12 +113,31 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${API_URL}?${params.join('&')}`;
     }
     
-    function renderProducts(products) {
+    async function renderProducts(products) {
         productsGrid.innerHTML = '';
+        
+        let userFavorites = [];
+        let userOrder = null;
+        
+        if (currentUser) {
+            try {
+                const userResponse = await fetch(`${USERS_URL}/${currentUser.id}`);
+                const userData = await userResponse.json();
+                userFavorites = userData.favorite || [];
+                
+                const orderResponse = await fetch(`${ORDERS_URL}?user_id=${currentUser.id}`);
+                const orders = await orderResponse.json();
+                userOrder = orders[0] || null;
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        }
         
         products.forEach(product => {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
+            
+            const isFavorite = userFavorites.includes(product.id);
             
             productCard.innerHTML = `
                 <img src="${product.pass}" alt="${product.name}" class="product-image">
@@ -124,11 +146,153 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h3 class="product-name">${product.name}</h3>
                     <p class="product-description">${product.description}</p>
                     <div class="product-price">${product.price} BYN</div>
-                    <div class="product-rating">★ ${product.rating}</div>
+                    <div class="product-actions">
+                        <div class="product-rating">★ ${product.rating}</div>
+                        <div class="action-buttons">
+                            <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-product-id="${product.id}">
+                                <img src="/images_foote_header/heart.svg" alt="Избранное">
+                            </button>
+                            <div class="quantity-controls">
+                                <button class="decrease-quantity" data-product-id="${product.id}">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increase-quantity" data-product-id="${product.id}">+</button>
+                            </div>
+                            <button class="cart-btn" data-product-id="${product.id}">
+                                <img src="/images_foote_header/shopping-cart.svg" alt="Корзина">
+                            </button>
+                        </div>
+                    </div>
                 </div>
             `;
             
             productsGrid.appendChild(productCard);
+        });
+        
+        setupProductActions();
+    }
+    
+   function setupProductActions() {
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                e.preventDefault();
+                if (!currentUser) {
+                    alert('Для добавления в избранное необходимо авторизоваться');
+                    return;
+                }
+                
+                const productId = btn.dataset.productId;
+                const isActive = btn.classList.contains('active');
+                
+                try {
+                    const response = await fetch(`${USERS_URL}/${currentUser.id}`);
+                    const userData = await response.json();
+                    let favorites = userData.favorite || [];
+                    
+                    if (isActive) {
+                        favorites = favorites.filter(id => id !== productId);
+                        btn.classList.remove('active');
+                    } else {
+                        if (favorites.includes(productId)) return;
+                        favorites.push(productId);
+                        btn.classList.add('active');
+                    }
+                    
+                    await fetch(`${USERS_URL}/${currentUser.id}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ favorite: favorites })
+                    });
+                    
+                } catch (error) {
+                    console.error('Error updating favorites:', error);
+                }
+            });
+        });
+        
+        document.querySelectorAll('.decrease-quantity').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const quantityElement = btn.nextElementSibling;
+                let quantity = parseInt(quantityElement.textContent);
+                
+                if (quantity > 1) {
+                    quantity--;
+                    quantityElement.textContent = quantity;
+                }
+            });
+        });
+        
+        document.querySelectorAll('.increase-quantity').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const quantityElement = btn.previousElementSibling;
+                let quantity = parseInt(quantityElement.textContent);
+                
+                quantity++;
+                quantityElement.textContent = quantity;
+            });
+        });
+        
+        document.querySelectorAll('.cart-btn').forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                e.preventDefault();
+                if (!currentUser) {
+                    alert('Для добавления в корзину необходимо авторизоваться');
+                    return;
+                }
+                
+                const productId = btn.dataset.productId;
+                const quantityElement = btn.closest('.action-buttons').querySelector('.quantity');
+                const quantity = parseInt(quantityElement.textContent);
+                
+                try {
+                    const orderResponse = await fetch(`${ORDERS_URL}?user_id=${currentUser.id}`);
+                    const orders = await orderResponse.json();
+                    let userOrder = orders[0];
+                    
+                    if (!userOrder) {
+                        const newOrder = {
+                            user_id: currentUser.id,
+                            date: new Date().toISOString(),
+                            items: [{ product_id: productId, quantity: quantity }]
+                        };
+                        
+                        await fetch(ORDERS_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(newOrder)
+                        });
+                    } else {
+                        const itemIndex = userOrder.items.findIndex(item => item.product_id === productId);
+                        
+                        if (itemIndex === -1) {
+                            userOrder.items.push({ product_id: productId, quantity: quantity });
+                        } else {
+                            userOrder.items[itemIndex].quantity += quantity;
+                        }
+                        
+                        await fetch(`${ORDERS_URL}/${userOrder.id}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(userOrder)
+                        });
+                    }
+                    
+                    quantityElement.textContent = '1';
+                    
+                    showNotification('Товар добавлен в корзину');
+                    
+                } catch (error) {
+                    console.error('Error updating cart:', error);
+                    showNotification('Ошибка при добавлении в корзину', 'error');
+                }
+            });
         });
     }
     
