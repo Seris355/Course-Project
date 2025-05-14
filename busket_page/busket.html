@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kursavik</title>
     
-    <link rel="stylesheet" href="/loader_style.css">
     <link rel="stylesheet" href="/normalise_css.css">
     <link rel="stylesheet" href="/header and footer styles.css" />
-    <link rel="stylesheet" href="busket.css" />
+    <link rel="stylesheet" href="/shop_page/shop_style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,10 +25,27 @@
     </div>
 
     <header id="header-container" class="header"></header>
-    <main class="main">
-        ddd
+    <main class="cart-page">
+        <h1 class="page-title">Ваша корзина</h1>
+        
+        <div class="cart-content">
+            <div class="products-grid" id="products-grid"></div>
+            <div class="no-results" id="no-results">
+                <p>Корзина пуста</p>
+            </div>
+        </div>
+        
+        <div class="order-summary" id="order-summary">
+            <div class="total-price" id="total-price">Итого: 0 BYN</div>
+            <button class="primary-btn" id="order-btn">Оформить заказ</button>
+        </div>
+        
+        <div class="order-success" id="order-success">
+            <p>Ваш заказ в скором времени будет успешно доставлен! Стоимость заказа: <span id="final-price">0</span> BYN</p>
+        </div>
     </main>
     <footer id="footer-container" class="footer"></footer>
+    <script src="busket.js"></script>
     <script src="/footer_header_gen.js"></script>
     <script src="/loader.js"></script>
   </body>
