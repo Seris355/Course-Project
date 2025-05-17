@@ -57,7 +57,7 @@ document.getElementById('header-container').innerHTML = `
             <img src="/images_foote_header/globe.svg" alt="translate">
             <a href="/registration_authorization_page/aut.html" class="header_profile_icon_2_link"><img src="/images_foote_header/log-out.svg" alt="logo picture" class="header_profile_icon_2"></a>
             <img src="/images_foote_header/sun-moon.svg" alt="color change">
-            <img src="/images_foote_header/heart.svg" alt="favorite">
+            <a href="/favorite_page/favorite.html" class=""><img src="/images_foote_header/heart.svg" alt="favorite"></a>
         </nav>
     </div>
     <hr>
