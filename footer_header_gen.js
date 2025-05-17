@@ -9,7 +9,9 @@ document.getElementById('header-container').innerHTML = `
             <a href="/service_page/service.html" class="hn_link">Стрижки</a>
         </nav>
 
-        <img src="/images_foote_header/logo.svg" alt="logo picture" class="logo_header">
+        ${isAdmin() ? 
+            `<a href="/shop_admin/shop_admin.html" class="logo_header_link"><img src="/images_foote_header/logo.svg" alt="logo picture" class="logo_header"></a>` : 
+            `<img src="/images_foote_header/logo.svg" alt="logo picture" class="logo_header">`}
 
         <nav class="h_nav">
             <a href="/shop_page/shop.html" class="hn_link">Каталог</a>
@@ -59,8 +61,12 @@ document.getElementById('header-container').innerHTML = `
         </nav>
     </div>
     <hr>
-
 `;
+
+function isAdmin() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    return currentUser && currentUser.nickname === 'admin' && currentUser.password === 'admin';
+}
 
 document.getElementById('footer-container').innerHTML = `
     <hr>

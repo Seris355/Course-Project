@@ -1,0 +1,288 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.catalog {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.filter-group select, 
+.filter-group input {
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.search-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.search-container input {
+    flex-grow: 1;
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.range-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+.range-inputs input {
+    width: 70px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background-color: #111;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.product-category {
+    display: inline-block;
+    background-color: #333;
+    color: #ccc;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 5px;
+}
+
+.product-rating {
+    color: orange;
+    font-weight: bold;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: orange;
+    color: black;
+    border-color: orange;
+}
+
+.save-btn, .add-btn {
+    padding: 12px 24px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.save-btn:hover, .add-btn:hover {
+    background-color: #ffb733;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.admin-form input, .admin-form select, .admin-form textarea {
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-form input[type="number"]::-webkit-outer-spin-button,
+.admin-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.admin-form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.admin-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+.delete-btn, .delete-new-btn {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.delete-btn:hover, .delete-new-btn:hover {
+    background-color: #ff5555;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.notification.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.notification.fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .pagination {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .save-btn, .add-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

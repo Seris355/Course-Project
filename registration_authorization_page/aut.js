@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     id: user.id,
                     nickname: user.nickname,
                     fio: user.fio,
-                    email: user.email
+                    email: user.email,
+                    password: user.password
                 }));
                 
                 window.location.href = '/main_page/main.html'; 

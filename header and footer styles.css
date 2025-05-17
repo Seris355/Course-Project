@@ -305,4 +305,66 @@ body{
 }
 
 
+.admin-bar {
+    background-color: #2b2b2b;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.admin-form input {
+    padding: 6px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 3px;
+}
+
+.admin-form button {
+    padding: 6px;
+    background-color: rgb(205, 34, 12);
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.delete-btn {
+    background-color: #ff3333;
+    color: white;
+}
+
+.save-btn {
+    background-color: #33cc33;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-actions {
+        flex-direction: column;
+    }
+}
+
+
 
