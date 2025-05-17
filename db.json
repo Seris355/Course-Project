@@ -23,7 +23,12 @@
       "birthdate": "2005-05-05",
       "email": "retysokospka@gmail.com",
       "registrationDate": "2025-05-13T05:55:58.570Z",
-      "favorite": []
+      "favorite": [
+        "13",
+        "1",
+        "2",
+        "3"
+      ]
     },
     {
       "id": 1747116114364,
@@ -34,6 +39,31 @@
       "birthdate": "2006-05-05",
       "email": "retyokosspka@gmail.com",
       "registrationDate": "2025-05-13T06:01:54.364Z",
+      "favorite": []
+    },
+    {
+      "id": 1747504864172,
+      "fio": "Сикорин Степан",
+      "lastName": "Сикорин",
+      "firstName": "Степан",
+      "middleName": "",
+      "nickname": "Seris355",
+      "password": "8jN5U$[K(",
+      "phone": "+375291328359",
+      "birthdate": "2006-05-05",
+      "email": "retyokopka@gmail.com",
+      "registrationDate": "2025-05-17T18:01:04.172Z",
+      "favorite": []
+    },
+    {
+      "id": 1747506436589,
+      "fio": "Степан Сикорин",
+      "nickname": "WildPhoenix660",
+      "password": "88c>dTKj|M??5#Qg",
+      "phone": "+375291328356",
+      "birthdate": "2000-05-05",
+      "email": "unnamed3f21123@mail.ru",
+      "registrationDate": "2025-05-17T18:27:16.589Z",
       "favorite": []
     }
   ],
@@ -331,10 +361,10 @@
     },
     {
       "user_id": 1747115758570,
-      "date": "2025-05-14T07:00:35.495Z",
+      "date": "2025-05-14T12:30:12.655Z",
       "items": [
         {
-          "product_id": "3",
+          "product_id": "1",
           "quantity": 1
         }
       ],

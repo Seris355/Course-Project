@@ -19,12 +19,16 @@
   </head>
 </head>
 <body>
-    <div class="register-container">
+     <div class="register-container">
         <h1>Регистрация</h1>
         <form id="registerForm">
-            <div class="form-group">
-                <label for="fio">ФИО <span class="required">*</span></label>
-                <input type="text" id="fio" name="fio" required>
+            <div class="form-group fio-group">
+                <label>ФИО <span class="required">*</span></label>
+                <div class="fio-row">
+                    <input type="text" id="firstName" name="firstName" placeholder="Имя" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
+                    <input type="text" id="middleName" name="middleName" placeholder="Отчество">
+                </div>
                 <div class="error" id="fioError"></div>
             </div>
             <div class="form-group">
@@ -42,7 +46,7 @@
                 <input type="date" id="birthdate" name="birthdate" required>
                 <div class="error" id="birthdateError"></div>
             </div>
-             <div class="form-group password-group">
+            <div class="form-group password-group">
                 <label for="password">Пароль <span class="required">*</span></label>
                 <div class="password-row">
                     <input type="password" id="password" name="password" placeholder="Пароль (8-20 символов)" required>
@@ -77,5 +81,6 @@
         </div>
     </div>
     <script src="regis.js"></script>
+</body>
 </body>
 </html>
