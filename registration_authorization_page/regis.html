@@ -8,6 +8,7 @@
     <title>kursavik</title>
     <link rel="stylesheet" href="/loader_style.css">
     <link rel="stylesheet" href="/normalise_css.css">
+    <link rel="stylesheet" href="/header and footer styles.css">
     <link rel="stylesheet" href="/styles_for_white_theme.css" />
     <link rel="stylesheet" href="regis_and_aut.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,69 +21,78 @@
   </head>
 </head>
 <body>
-     <div class="register-container">
-        <h1>Регистрация</h1>
-        <form id="registerForm">
+  <header id="header-container" class="header"></header>
+  <main>
+    <section class="H1_sec">
+        <div class="register-container">
+            <h1 data-translate="register_title">Регистрация</h1>
+            <form id="registerForm">
             <div class="form-group fio-group">
-                <label>ФИО <span class="required">*</span></label>
+                <label data-translate="fio_label">ФИО <span class="required">*</span></label>
                 <div class="fio-row">
-                    <input type="text" id="firstName" name="firstName" placeholder="Имя" required>
-                    <input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
-                    <input type="text" id="middleName" name="middleName" placeholder="Отчество">
+                <input type="text" id="firstName" name="firstName" data-translate-placeholder="first_name_placeholder" placeholder="Имя" required>
+                <input type="text" id="lastName" name="lastName" data-translate-placeholder="last_name_placeholder" placeholder="Фамилия" required>
+                <input type="text" id="middleName" name="middleName" data-translate-placeholder="middle_name_placeholder" placeholder="Отчество">
                 </div>
                 <div class="error" id="fioError"></div>
             </div>
             <div class="form-group">
-                <label for="phone">Телефон <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="+375XXXXXXXXX" required>
+                <label for="phone" data-translate="phone_label">Телефон <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" data-translate-placeholder="phone_placeholder" placeholder="+375XXXXXXXXX" required>
                 <div class="error" id="phoneError"></div>
             </div>
             <div class="form-group">
-                <label for="email">Email <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
+                <label for="email" data-translate="email_label">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" data-translate-placeholder="email_placeholder" placeholder="Введите email" required>
                 <div class="error" id="emailError"></div>
             </div>
             <div class="form-group">
-                <label for="birthdate">Дата рождения <span class="required">*</span></label>
+                <label for="birthdate" data-translate="birthdate_label">Дата рождения <span class="required">*</span></label>
                 <input type="date" id="birthdate" name="birthdate" required>
                 <div class="error" id="birthdateError"></div>
             </div>
             <div class="form-group password-group">
-                <label for="password">Пароль <span class="required">*</span></label>
+                <label for="password" data-translate="password_label">Пароль <span class="required">*</span></label>
                 <div class="password-row">
-                    <input type="password" id="password" name="password" placeholder="Пароль (8-20 символов)" required>
-                    <button type="button" id="generatePassword" class="btn-generate">Сгенерировать</button>
+                <input type="password" id="password" name="password" data-translate-placeholder="password_placeholder" placeholder="Пароль (8-20 символов)" required>
+                <button type="button" id="generatePassword" class="btn-generate" data-translate="generate_password_button">Сгенерировать</button>
                 </div>
                 <div class="error" id="passwordError"></div>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" data-translate-placeholder="confirm_password_placeholder" placeholder="Повторите пароль" required>
                 <div class="error" id="confirmPasswordError"></div>
                 <div id="generatedPasswordContainer" style="display: none;">
-                    <div id="generatedPassword"></div>
-                    <button type="button" id="copyPassword">Копировать пароль</button>
+                <div id="generatedPassword"></div>
+                <button type="button" id="copyPassword" data-translate="copy_password_button">Копировать пароль</button>
                 </div>
             </div>
             <div class="form-group">
-                <label for="nickname">Никнейм</label>
+                <label for="nickname" data-translate="nickname_label">Никнейм</label>
                 <div class="nickname-group">
-                    <input type="text" id="nickname" name="nickname" readonly>
-                    <button type="button" id="generateNickname">Сгенерировать</button>
+                <input type="text" id="nickname" name="nickname" readonly>
+                <button type="button" id="generateNickname" data-translate="generate_nickname_button">Сгенерировать</button>
                 </div>
                 <div class="error" id="nicknameError"></div>
-                <div id="nicknameAttempts" style="display: none;">Осталось попыток: <span id="attemptsCount">5</span></div>
+                <div id="nicknameAttempts" style="display: none;" data-translate="nickname_attempts"> <span id="attemptsCount">5</span></div>
             </div>
             <div class="form-group checkbox-group">
                 <input type="checkbox" id="agreement" name="agreement" required>
-                <label for="agreement">Я прочитал и согласен с <a href="#">Соглашением пользователя</a> <span class="required">*</span></label>
+                <label for="agreement" data-translate="agreement_label">Я прочитал и согласен с Соглашением пользователя <span class="required">*</span></label>
                 <div class="error" id="agreementError"></div>
             </div>
-            <button type="submit" id="registerBtn" class="btn" disabled>Зарегистрироваться</button>
-        </form>
-        <div class="links">
-            <a href="aut.html">Уже есть аккаунт? Войти</a>
+            <button type="submit" id="registerBtn" class="btn" data-translate="register_button" disabled>Зарегистрироваться</button>
+            </form>
+            <div class="links">
+            <a href="aut.html" data-translate="login_link">Уже есть аккаунт? Войти</a>
+            </div>
         </div>
-    </div>
+        </section>
+    </main>    
+    <footer id="footer-container" class="footer"></footer>
+    <script src="/footer_header_gen.js"></script>
     <script src="regis.js"></script>
     <script src="/toggle_theme.js"></script>
+    <script src="regis_trans.js"></script>
+    <script src="/translate.js"></script>
 </body>
 </body>
 </html>

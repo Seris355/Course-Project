@@ -19,7 +19,7 @@ document.getElementById('header-container').innerHTML = `
         </nav>
         <a href="/registration_authorization_page/aut.html" class="header_profile_icon_link"><img src="/images_foote_header/log-out.svg" alt="logo picture" class="header_profile_icon"></a>
         
-        <div class="burger_container">
+        <div class="burger_container" id="delet">
             <input type="checkbox" id="burger_toggle_id" class="burger_toggle">
             
             <label for="burger_toggle_id" class="burger">
@@ -52,13 +52,13 @@ document.getElementById('header-container').innerHTML = `
     </div>
     <div class="header_second_line">
       <nav class="h_nav_2">
-            <img src="/images_foote_header/eye.svg" alt="icon blind" class="h_2nd">
+            <img src="/images_foote_header/eye.svg" alt="icon blind" class="h_2nd" id="delet">
             <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
                 <img src="/images_foote_header/globe.svg" alt="translate" class="h_2nd">
             </button>
             <a href="/registration_authorization_page/aut.html" class="header_profile_icon_2_link"><img src="/images_foote_header/log-out.svg" alt="logo picture" class="h_2nd"></a>
             <img src="/images_foote_header/sun-moon.svg" alt="Toggle theme" class="h_2nd theme-toggle" id="theme-toggle">
-            <a href="/favorite_page/favorite.html" class=""><img src="/images_foote_header/heart.svg" alt="favorite" class="h_2nd"></a>
+            <a href="/favorite_page/favorite.html" class="" id="delet"><img src="/images_foote_header/heart.svg" alt="favorite" class="h_2nd" ></a>
         </nav>
     </div>
     <hr>
@@ -67,7 +67,7 @@ document.getElementById('header-container').innerHTML = `
 document.getElementById('footer-container').innerHTML = `
     <hr>
     <ul class="f_list">
-        <li class="logo_footer"><a href="/main_page/main.html"><img src="/images_foote_header/logo2.svg" alt="logo footer" class="footer_logo"></a></li>
+        <li class="logo_footer" id="delet"><a href="/main_page/main.html"><img src="/images_foote_header/logo2.svg" alt="logo footer" class="footer_logo"></a></li>
         <li>
             <h2 data-translate="footer_contacts">Контакты</h2>
             <div class="footer_phone_flex_error">

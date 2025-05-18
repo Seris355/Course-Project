@@ -34,6 +34,7 @@ body{
   }
    .h_nav_2{
     display: flex;
+    justify-content: center;
     gap:8vw;
   }
 
@@ -61,8 +62,8 @@ body{
     flex-direction: column;
   }
   .header_second_line{
-    display: flex;
-    justify-content: center;
+  
+
     gap:27vw;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;

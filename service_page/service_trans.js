@@ -1,0 +1,70 @@
+const translations = {
+  ru: {
+    // Header
+    nav_main: "Главная",
+    nav_masters: "Мастера",
+    nav_haircuts: "Стрижки",
+    nav_catalog: "Каталог",
+    nav_cart: "Корзина",
+    nav_contacts: "Контакты",
+    // Footer
+    footer_contacts: "Контакты",
+    footer_phone_1: "+7 (812) 123-45-67",
+    footer_phone_2: "+7 (911) 123-45-67",
+    footer_address: "Новоостровский проспект, дом 36 лит.",
+    footer_hours: "Режим работы",
+    footer_hours_weekdays: "C 10:00 до 21:00 (Пн-Пт)",
+    footer_hours_weekends: "С 11:00 до 20:00 (Сб-Вс)",
+    footer_instagram: "Мы в Instagram",
+    footer_copyright: "Copyright © 2017 - 2022",
+    // Services page
+    services_title: "Цены на услуги",
+    service_women_hair: "Женская укладка",
+    service_men_hair: "Мужская укладка",
+    service_teen_hair: "Подростковая укладка",
+    service_kids_hair: "Детская укладка",
+    service_trendy_hair: "Модная укладка",
+    service_cringe_hair: "Кринжовая укладка",
+    service_elderly_hair: "Пожилая укладка",
+    service_19th_hair: "Укладка 19 века",
+    service_rusty_nail_hair: "Укладка “Ржавый гвоздь”",
+    service_incredible_hair: "Невероятная укладка",
+    service_coder_hair: "Укладка “для прогеров”",
+    service_lay_hair: "Укладка “укладка”",
+    service_hair_treatment: "обработка кончиков волос"
+  },
+  en: {
+    // Header
+    nav_main: "Home",
+    nav_masters: "Masters",
+    nav_haircuts: "Haircuts",
+    nav_catalog: "Catalog",
+    nav_cart: "Cart",
+    nav_contacts: "Contacts",
+    // Footer
+    footer_contacts: "Contacts",
+    footer_phone_1: "+7 (812) 123-45-67",
+    footer_phone_2: "+7 (911) 123-45-67",
+    footer_address: "Novoostrovsky Prospekt, 36 lit.",
+    footer_hours: "Working Hours",
+    footer_hours_weekdays: "10:00 AM - 9:00 PM (Mon-Fri)",
+    footer_hours_weekends: "11:00 AM - 8:00 PM (Sat-Sun)",
+    footer_instagram: "We’re on Instagram",
+    footer_copyright: "Copyright © 2017 - 2022",
+    // Services page
+    services_title: "Service Prices",
+    service_women_hair: "Women’s Styling",
+    service_men_hair: "Men’s Styling",
+    service_teen_hair: "Teen Styling",
+    service_kids_hair: "Kids’ Styling",
+    service_trendy_hair: "Trendy Styling",
+    service_cringe_hair: "Cringe Styling",
+    service_elderly_hair: "Elderly Styling",
+    service_19th_hair: "19th Century Style",
+    service_rusty_nail_hair: "“Rusty Nail” Style",
+    service_incredible_hair: "Incredible Styling",
+    service_coder_hair: "“Coder” Styling",
+    service_lay_hair: "“Lay” Styling",
+    service_hair_treatment: "hair ends treatment"
+  }
+};

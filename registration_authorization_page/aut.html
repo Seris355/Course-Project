@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/loader_style.css">
     <link rel="stylesheet" href="/normalise_css.css">
     <link rel="stylesheet" href="regis_and_aut.css">
+    <link rel="stylesheet" href="regis_and_aut.css">
+    <link rel="stylesheet" href="/header and footer styles.css">
     <link rel="stylesheet" href="/styles_for_white_theme.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,25 +20,35 @@
   </head>
 </head>
 <body>
-    <div class="auth-container">
-        <h1>Вход в систему</h1>
+  <header id="header-container" class="header"></header>
+  <main>
+    <section class="H1_sec">    
+      <div class="auth-container">
+        <h1 data-translate="login_title">Вход в систему</h1>
         <form id="loginForm">
-            <div class="form-group">
-                <label for="login">Логин</label>
-                <input type="text" id="login" name="login" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn">Войти</button>
+          <div class="form-group">
+            <label for="login" data-translate="login_label">Логин</label>
+            <input type="text" id="login" name="login" required data-translate-placeholder="login_placeholder" placeholder="Введите логин">
+          </div>
+          <div class="form-group">
+            <label for="password" data-translate="password_label">Пароль</label>
+            <input type="password" id="password" name="password" required data-translate-placeholder="password_placeholder" placeholder="Введите пароль">
+          </div>
+          <button type="submit" class="btn" data-translate="login_button">Войти</button>
         </form>
         <div class="links">
-            <a href="regis.html">Зарегистрироваться</a>
+          <a href="regis.html" data-translate="register_link">Зарегистрироваться</a>
         </div>
         <div id="errorMessage" class="error-message"></div>
-    </div>
+      </div>
+    </section>
+  </main>
+    
+    <footer id="footer-container" class="footer"></footer>
+    <script src="/footer_header_gen.js"></script>
     <script src="aut.js"></script>
     <script src="/toggle_theme.js"></script>
+     <script src="aut_trans.js"></script>
+    <script src="/translate.js"></script>
 </body>
 </html>

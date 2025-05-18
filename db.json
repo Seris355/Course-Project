@@ -80,16 +80,27 @@
         "4",
         "2"
       ]
+    },
+    {
+      "id": 1747587305056,
+      "fio": "Степан Сикорин",
+      "nickname": "BraveFox310",
+      "password": "J,h8*7t}7H",
+      "phone": "+375291328357",
+      "birthdate": "2005-05-05",
+      "email": "retyoskopka@gmail.com",
+      "registrationDate": "2025-05-18T16:55:05.056Z",
+      "favorite": []
     }
   ],
   "products": [
     {
       "id": "1",
-      "name": "Cover-Age 3.0 Medium SPF50+",
-      "price": 121,
+      "name": "ффф",
+      "price": 999999,
       "category": "Face",
-      "description": "Крем-пудра с тонирующим эффектом",
-      "rating": 4.5,
+      "description": "Крем-пудра с тонирующвцвццвим эффектом",
+      "rating": 5,
       "pass": "/shop_page/shop_images/prod1.jpg"
     },
     {
@@ -396,6 +407,17 @@
         }
       ],
       "id": 3
+    },
+    {
+      "user_id": 1747070217951,
+      "date": "2025-05-18T14:59:59.071Z",
+      "items": [
+        {
+          "product_id": "3",
+          "quantity": 4
+        }
+      ],
+      "id": 4
     }
   ]
 }

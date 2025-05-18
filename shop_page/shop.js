@@ -140,31 +140,31 @@ document.addEventListener('DOMContentLoaded', function() {
             const isFavorite = userFavorites.includes(product.id);
             
             productCard.innerHTML = `
-                <img src="${product.pass}" alt="${product.name}" class="product-image">
-                <div class="product-info">
-                    <span class="product-category">${product.category}</span>
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-description">${product.description}</p>
-                    <div class="product-price">${product.price} BYN</div>
-                    <div class="product-actions">
-                        <div class="product-rating">★ ${product.rating}</div>
-                        <div class="action-buttons">
-                            <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-product-id="${product.id}">
-                                <img src="/images_foote_header/heart.svg" alt="Избранное">
-                            </button>
-                            <div class="quantity-controls">
-                                <button class="decrease-quantity" data-product-id="${product.id}">-</button>
-                                <span class="quantity">1</span>
-                                <button class="increase-quantity" data-product-id="${product.id}">+</button>
-                            </div>
-                            <button class="cart-btn" data-product-id="${product.id}">
-                                <img src="/images_foote_header/shopping-cart.svg" alt="Корзина" class="product_cart">
-                            </button>
-                        </div>
+            <img src="${product.pass}" alt="${product.name}" class="product-image">
+            <div class="product-info">
+                <span class="product-category" data-translate="category_${product.category.toLowerCase()}">${product.category}</span>
+                <h3 class="product-name" data-translate="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_name">${product.name}</h3>
+                <p class="product-description" data-translate="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_description">${product.description}</p>
+                <div class="product-price">${product.price} BYN</div>
+                <div class="product-actions">
+                <div class="product-rating">★ ${product.rating}</div>
+                <div class="action-buttons">
+                    <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-product-id="${product.id}">
+                    <img src="/images_foote_header/heart.svg" alt="Избранное" data-translate-alt="favorite_alt">
+                    </button>
+                    <div class="quantity-controls">
+                    <button class="decrease-quantity" data-product-id="${product.id}">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase-quantity" data-product-id="${product.id}">+</button>
                     </div>
+                    <button class="cart-btn" data-product-id="${product.id}">
+                    <img src="/images_foote_header/shopping-cart.svg" alt="Корзина" data-translate-alt="cart_alt" class="product_cart">
+                    </button>
                 </div>
+                </div>
+            </div>
             `;
-            
+                        
             productsGrid.appendChild(productCard);
         });
         

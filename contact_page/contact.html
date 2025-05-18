@@ -24,35 +24,33 @@
 
   <body>
     <div class="mask">
-        <div class="loader"></div>
-      </div>
-  <header id="header-container" class="header"></header>
-
+      <div class="loader"></div>
+    </div>
+    <header id="header-container" class="header"></header>
     <main>
       <section class="contact">
-        <h2 class="text">Контакты</h2>
+        <h2 class="text" data-translate="contacts_title">Контакты</h2>
         <div class="flex_container_for_main">
           <div class="image_container">
             <img src="./contact images/map.png" alt="map image" class="map">
           </div>
-          
           <div class="flex">
-              <div class="contact_info">
-                  <h3>Контакты</h3>
-                  <p class="phone">+7 (812) 123-45-67</p>
-                  <p class="phone">+7 (911) 123-45-67</p>
-                  <p class="adress">Новоостровский про <p> спект, дом 36 лит. </p></p>
-              </div>
-              <div class="contact_info">
-                  <h3>Режим работы</h3>
-                  <p class="phone">C 10:00 до 21:00 (Пн-Пт)</p>
-                  <p class="phone">С 11:00 до 20:00 (Сб-Вс)</p>
-              </div>
-              <div class="contact_info">
-                  <h3>Дополнительная</h3>
-                  <p class="phone">Будем рады вас видеть!</p>
-                  <p class="phone">Не забудьте взять бахилы</p>
-              </div>
+            <div class="contact_info">
+              <h3 data-translate="contacts_section">Контакты</h3>
+              <p class="phone" data-translate="contacts_phone_1">+7 (812) 123-45-67</p>
+              <p class="phone" data-translate="contacts_phone_2">+7 (911) 123-45-67</p>
+              <p class="adress" data-translate="contacts_address">Новоостровский проспект, дом 36 лит.</p>
+            </div>
+            <div class="contact_info">
+              <h3 data-translate="contacts_hours">Режим работы</h3>
+              <p class="phone" data-translate="contacts_hours_weekdays">C 10:00 до 21:00 (Пн-Пт)</p>
+              <p class="phone" data-translate="contacts_hours_weekends">С 11:00 до 20:00 (Сб-Вс)</p>
+            </div>
+            <div class="contact_info">
+              <h3 data-translate="contacts_additional">Дополнительная</h3>
+              <p class="phone" data-translate="contacts_welcome">Будем рады вас видеть!</p>
+              <p class="phone" data-translate="contacts_shoe_covers">Не забудьте взять бахилы</p>
+            </div>
           </div>
         </div>
       </section>
@@ -61,5 +59,7 @@
     <script src="/footer_header_gen.js"></script>
     <script src="/loader.js"></script>
     <script src="/toggle_theme.js"></script>
+    <script src="contact_trans.js"></script>
+    <script src="/translate.js"></script>
   </body>
 </html>

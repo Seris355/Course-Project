@@ -19,68 +19,65 @@
     />
   </head>
 
-  <body>
+ <body>
     <div class="mask">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <header id="header-container" class="header"></header>
     <main class="catalog">
-        <section class="filters">
-            <div class="search-container">
-                <input type="text" id="search-input" placeholder="Поиск...">
-                <button id="search-btn">Найти</button>
-            </div>
-            
-            <div class="filter-group">
-                <label for="category-filter">Категория:</label>
-                <select id="category-filter">
-                    <option value="">Все</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label for="price-range">Цена:</label>
-                <div class="range-inputs">
-                    <input type="number" id="price-min" placeholder="От" min="0">
-                    <input type="number" id="price-max" placeholder="До" min="0">
-                </div>
-            </div>
-            
-            <div class="filter-group">
-                <label for="rating-filter">Рейтинг:</label>
-                <select id="rating-filter">
-                    <option value="0">Любой</option>
-                    <option value="3">3+</option>
-                    <option value="4">4+</option>
-                    <option value="4.5">4.5+</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label for="sort-by">Сортировка:</label>
-                <select id="sort-by">
-                    <option value="">По умолчанию</option>
-                    <option value="name_asc">А-Я</option>
-                    <option value="name_desc">Я-А</option>
-                    <option value="price_asc">Дешевые</option>
-                    <option value="price_desc">Дорогие</option>
-                </select>
-            </div>
-        </section>
-        
-        <section class="products-container">
-            <div class="products-grid" id="products-grid"></div>
-            <div class="no-results" id="no-results" style="display: none;">
-                <p>Товары не найдены</p>
-            </div>
-            <div class="pagination" id="pagination"></div>
-        </section>
+      <section class="filters">
+        <div class="search-container">
+          <input type="text" id="search-input" data-translate-placeholder="search_placeholder" placeholder="Поиск...">
+          <button id="search-btn" data-translate="search_button">Найти</button>
+        </div>
+        <div class="filter-group">
+          <label for="category-filter" data-translate="category_label">Категория:</label>
+          <select id="category-filter">
+            <option value="" data-translate="category_all">Все</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="price-range" data-translate="price_label">Цена:</label>
+          <div class="range-inputs">
+            <input type="number" id="price-min" data-translate-placeholder="price_min_placeholder" placeholder="От" min="0">
+            <input type="number" id="price-max" data-translate-placeholder="price_max_placeholder" placeholder="До" min="0">
+          </div>
+        </div>
+        <div class="filter-group">
+          <label for="rating-filter" data-translate="rating_label">Рейтинг:</label>
+          <select id="rating-filter">
+            <option value="0" data-translate="rating_any">Любой</option>
+            <option value="3" data-translate="rating_3">3+</option>
+            <option value="4" data-translate="rating_4">4+</option>
+            <option value="4.5" data-translate="rating_4_5">4.5+</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="sort-by" data-translate="sort_label">Сортировка:</label>
+          <select id="sort-by">
+            <option value="" data-translate="sort_default">По умолчанию</option>
+            <option value="name_asc" data-translate="sort_name_asc">А-Я</option>
+            <option value="name_desc" data-translate="sort_name_desc">Я-А</option>
+            <option value="price_asc" data-translate="sort_price_asc">Дешевле</option>
+            <option value="price_desc" data-translate="sort_price_desc">Дороже</option>
+          </select>
+        </div>
+      </section>
+      <section class="products-container">
+        <div class="products-grid" id="products-grid"></div>
+        <div class="no-results" id="no-results" style="display: none;">
+          <p data-translate="no_results">Товары не найдены</p>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </section>
     </main>
     <script src="shop.js"></script>
     <script src="add_to_fav_and_busket.js"></script>
     <footer id="footer-container" class="footer"></footer>
     <script src="/footer_header_gen.js"></script>
     <script src="/loader.js"></script>
-     <script src="/toggle_theme.js"></script>
+    <script src="/toggle_theme.js"></script>
+    <script src="shop_trans.js"></script>
+    <script src="/translate.js"></script>
   </body>
 </html>

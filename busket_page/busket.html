@@ -20,35 +20,32 @@
   </head>
 
   <body>
-
     <div class="mask">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
-
     <header id="header-container" class="header"></header>
     <main class="cart-page">
-        <h1 class="page-title">Ваша корзина</h1>
-        
-        <div class="cart-content">
-            <div class="products-grid" id="products-grid"></div>
-            <div class="no-results" id="no-results">
-                <p>Корзина пуста</p>
-            </div>
+      <h1 class="page-title" data-translate="cart_title">Ваша корзина</h1>
+      <div class="cart-content">
+        <div class="products-grid" id="products-grid"></div>
+        <div class="no-results" id="no-results">
+          <p data-translate="no_results">Корзина пуста</p>
         </div>
-        
-        <div class="order-summary" id="order-summary">
-            <div class="total-price" id="total-price">Итого: 0 BYN</div>
-            <button class="primary-btn" id="order-btn">Оформить заказ</button>
-        </div>
-        
-        <div class="order-success" id="order-success">
-            <p>Ваш заказ в скором времени будет успешно доставлен! Стоимость заказа: <span id="final-price">0</span> BYN</p>
-        </div>
+      </div>
+      <div class="order-summary" id="order-summary">
+        <div class="total-price" id="total-price" data-translate="total_price">Итого: 0 BYN</div>
+        <button class="primary-btn" id="order-btn" data-translate="order_button">Оформить заказ</button>
+      </div>
+      <div class="order-success" id="order-success">
+        <p data-translate="order_success">Ваш заказ в скором времени будет успешно доставлен! Стоимость заказа: <span id="final-price">0</span> BYN</p>
+      </div>
     </main>
     <footer id="footer-container" class="footer"></footer>
     <script src="busket.js"></script>
     <script src="/footer_header_gen.js"></script>
     <script src="/loader.js"></script>
      <script src="/toggle_theme.js"></script>
+     <script src="busket_trans.js"></script>
+    <script src="/translate.js"></script>
   </body>
 </html>

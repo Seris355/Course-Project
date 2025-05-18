@@ -34,7 +34,11 @@ body.light-theme .arrow-right {
 
 /*main*/
 body.light-theme h1 {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+body.light-theme .white {
+  color: rgb(255, 255, 255) !important;
 }
 
 body.light-theme .burger span {
@@ -205,4 +209,19 @@ body.light-theme .checkbox-group input[type="checkbox"] {
 
 body.light-theme .required {
     color: #d32f2f;
+}
+
+body.light-theme .admin-form
+body.light-theme .product-name,
+body.light-theme .product-price,
+body.light-theme .product-category-select,
+body.light-theme .product-description,
+body.light-theme .product-rating,
+body.light-theme .product-image-path
+{
+    background-color: rgb(220, 182, 182) !important;
+}
+
+body.light-theme.product-info{
+    background-color:#b6a5a5;
 }
