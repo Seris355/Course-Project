@@ -34,7 +34,7 @@ body.light-theme .arrow-right {
 
 /*main*/
 body.light-theme h1 {
-  color: white;
+  color: white !important;
 }
 
 body.light-theme .burger span {

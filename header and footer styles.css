@@ -362,3 +362,12 @@ body{
   padding: 0;
   margin: 0;
 }
+
+.language-toggle {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+    }
