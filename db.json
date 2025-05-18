@@ -10,9 +10,8 @@
       "email": "unnamed321123@mail.ru",
       "registrationDate": "2025-05-12T19:30:17.951Z",
       "favorite": [
-        "2",
         "1",
-        "4"
+        "26"
       ]
     },
     {
@@ -357,25 +356,6 @@
   ],
   "orders": [
     {
-      "user_id": 1747078217951,
-      "date": "2025-05-14T06:35:02.919Z",
-      "items": [
-        {
-          "product_id": "18",
-          "quantity": 8
-        },
-        {
-          "product_id": "3",
-          "quantity": 7
-        },
-        {
-          "product_id": "1",
-          "quantity": 1
-        }
-      ],
-      "id": 1
-    },
-    {
       "user_id": 1747115758570,
       "date": "2025-05-14T12:30:12.655Z",
       "items": [
@@ -385,6 +365,37 @@
         }
       ],
       "id": 2
+    },
+    {
+      "user_id": 1747078217951,
+      "date": "2025-05-18T12:04:49.462Z",
+      "items": [
+        {
+          "product_id": "2",
+          "quantity": 1
+        },
+        {
+          "product_id": "6",
+          "quantity": 1
+        },
+        {
+          "product_id": "3",
+          "quantity": 1
+        },
+        {
+          "product_id": "1",
+          "quantity": 2
+        },
+        {
+          "product_id": "8",
+          "quantity": 1
+        },
+        {
+          "product_id": "7",
+          "quantity": 1
+        }
+      ],
+      "id": 3
     }
   ]
 }

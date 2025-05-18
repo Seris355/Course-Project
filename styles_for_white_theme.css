@@ -1,0 +1,208 @@
+body.light-theme {
+  background-color: white;
+  color: black;
+}
+
+body.light-theme .header_inst,
+body.light-theme .logo_header,
+body.light-theme .footer_logo
+{
+  filter: invert(1);
+}
+
+body.light-theme .h_nav_2 img,
+body.light-theme .header_profile_icon {
+  filter: invert(0);
+}
+
+body.light-theme a {
+  color: black;
+}
+
+body.light-theme a:visited {
+  color: #000000;
+}
+
+body.light-theme .burger_dropdown {
+  background: rgb(189, 189, 189);
+}
+
+body.light-theme .arrow-left,
+body.light-theme .arrow-right {
+  filter: invert(0);
+}
+
+/*main*/
+body.light-theme h1 {
+  color: white;
+}
+
+body.light-theme .burger span {
+  background-color: rgb(0, 0, 0);
+}
+
+body.light-theme .idk_image,
+body.light-theme .logos_partners{
+  filter: invert(1);
+}
+/*shop*/
+
+
+body.light-theme .filter-group select,
+body.light-theme .filter-group input {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .filters{
+    background-color: #b6a5a5;
+}
+
+body.light-theme .search-container input {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-right: none;
+}
+
+body.light-theme .search-container button {
+    background-color: #ff9800;
+    color: #000;
+}
+
+body.light-theme .product-card {
+    background-color: #d1b7b7;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .product-description {
+    color: #666;
+}
+
+body.light-theme .product-category {
+    background-color: #dad3d3;
+    color: #333;
+}
+
+body.light-theme .pagination button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .quantity-controls button {
+    background-color: #d7d7d7;
+    color: #333;
+}
+
+body.light-theme .quantity-controls button:hover {
+    background-color: #c7c7c7;
+}
+
+body.light-theme .order-summary {
+    background-color: #d6d6d6;
+}
+
+body.light-theme .primary-btn {
+    background-color: #d88200;
+    color: #000;
+}
+
+body.light-theme .primary-btn:hover {
+    background-color: #d57500;
+}
+
+body.light-theme .order-success {
+    background-color: #f5f5f5;
+}
+
+body.light-theme .order-success p {
+    color: #ff9800;
+}
+
+body.light-theme .product_cart{
+    filter: invert(0)
+}
+
+/*auth and regis*/
+
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.light-theme .register-container,
+body.light-theme .auth-container {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light-theme h1 {
+    color: #333;
+}
+
+body.light-theme input[type="text"],
+body.light-theme input[type="password"],
+body.light-theme input[type="email"],
+body.light-theme input[type="tel"],
+body.light-theme input[type="date"] {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light-theme input:focus {
+    border-color: #ff6d00;
+}
+
+body.light-theme .btn {
+    background-color: #ff6d00;
+    color: white;
+}
+
+body.light-theme .btn:hover {
+    background-color: #e65100;
+}
+
+body.light-theme .btn:disabled {
+    background-color: #bdbdbd;
+}
+
+body.light-theme .links a {
+    color: #d32f2f;
+}
+
+body.light-theme .error {
+    color: #d32f2f;
+}
+
+body.light-theme .btn-generate {
+    background-color: #616161;
+    color: white;
+}
+
+body.light-theme .btn-generate:hover {
+    background-color: #757575;
+}
+
+body.light-theme #generatedPassword {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.light-theme #copyPassword {
+    background-color: #616161;
+    color: white;
+}
+
+body.light-theme #copyPassword:hover {
+    background-color: #757575;
+}
+
+body.light-theme .checkbox-group input[type="checkbox"] {
+    accent-color: #ff6d00;
+}
+
+body.light-theme .required {
+    color: #d32f2f;
+}

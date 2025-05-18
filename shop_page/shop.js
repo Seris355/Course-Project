@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <button class="increase-quantity" data-product-id="${product.id}">+</button>
                             </div>
                             <button class="cart-btn" data-product-id="${product.id}">
-                                <img src="/images_foote_header/shopping-cart.svg" alt="Корзина">
+                                <img src="/images_foote_header/shopping-cart.svg" alt="Корзина" class="product_cart">
                             </button>
                         </div>
                     </div>
