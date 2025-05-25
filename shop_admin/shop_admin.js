@@ -156,12 +156,12 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="product-category" data-translate="${categoryKey}">${translations[language][categoryKey] || product.category}</span>
           <div class="admin-form">
             <input type="text" class="product-id" value="${product.id}" ${isEdited ? '' : 'readonly'} data-translate-placeholder="placeholder_product_id" placeholder="${translations[language]['placeholder_product_id']}">
-            <input type="text" class="product-name" value="${product.name}" data-translate-placeholder="placeholder_product_name" placeholder="${translations[language]['placeholder_product_name']}">
+            <input type="text" class="product-name" value="${product.name}" placeholder="Название">
             <input type="number" class="product-price" value="${product.price}" data-translate-placeholder="placeholder_product_price" placeholder="${translations[language]['placeholder_product_price']}" min="0" step="0.01">
             <select class="product-category-select">
               ${categories.map(c => `<option value="${c}" ${c === product.category ? 'selected' : ''} data-translate="category_${c.toLowerCase().replace(' ', '_')}">${translations[language][`category_${c.toLowerCase().replace(' ', '_')}`] || c}</option>`).join('')}
             </select>
-            <textarea class="product-description" data-translate-placeholder="placeholder_product_description" placeholder="${translations[language]['placeholder_product_description']}">${product.description}</textarea>
+            <textarea class="product-description" placeholder="Описание">${product.description}</textarea>
             <input type="number" class="product-rating" value="${product.rating}" data-translate-placeholder="placeholder_product_rating" placeholder="${translations[language]['placeholder_product_rating']}" min="0" max="5" step="0.1">
             <input type="text" class="product-image-path" value="${product.pass}" data-translate-placeholder="placeholder_product_image" placeholder="${translations[language]['placeholder_product_image']}">
           </div>
@@ -405,12 +405,12 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="product-category" data-translate="new_product">${translations[language]['new_product']}</span>
           <div class="admin-form">
             <input type="text" class="product-id" value="${newId}" data-translate-placeholder="placeholder_product_id" placeholder="${translations[language]['placeholder_product_id']}" readonly>
-            <input type="text" class="product-name" value="" data-translate-placeholder="placeholder_product_name" placeholder="${translations[language]['placeholder_product_name']}">
+            <input type="text" class="product-name" value="" placeholder="Name">
             <input type="number" class="product-price" value="0" data-translate-placeholder="placeholder_product_price" placeholder="${translations[language]['placeholder_product_price']}" min="0" step="0.01">
             <select class="product-category-select">
               ${categories.map(c => `<option value="${c}" data-translate="category_${c.toLowerCase().replace(' ', '_')}">${translations[language][`category_${c.toLowerCase().replace(' ', '_')}`] || c}</option>`).join('')}
             </select>
-            <textarea class="product-description" data-translate-placeholder="placeholder_product_description" placeholder="${translations[language]['placeholder_product_description']}"></textarea>
+            <textarea class="product-description" placeholder="Description"></textarea>
             <input type="number" class="product-rating" value="0" data-translate-placeholder="placeholder_product_rating" placeholder="${translations[language]['placeholder_product_rating']}" min="0" max="5" step="0.1">
             <input type="text" class="product-image-path" value="" data-translate-placeholder="placeholder_product_image" placeholder="${translations[language]['placeholder_product_image']}">
           </div>

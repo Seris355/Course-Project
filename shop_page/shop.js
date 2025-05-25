@@ -35,10 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             categories = [...new Set(products.map(p => p.category))];
             
-            categoryFilter.innerHTML = '<option value="">Все</option>';
+            categoryFilter.innerHTML = '<option value="" data-translate="category_all">Все</option>';
             categories.forEach(category => {
                 const option = document.createElement('option');
                 option.value = category;
+                option.setAttribute('data-translate', `category_${category.toLowerCase()}`);
                 option.textContent = category;
                 categoryFilter.appendChild(option);
             });
@@ -143,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="${product.pass}" alt="${product.name}" class="product-image">
             <div class="product-info">
                 <span class="product-category" data-translate="category_${product.category.toLowerCase()}">${product.category}</span>
-                <h3 class="product-name" data-translate="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_name">${product.name}</h3>
-                <p class="product-description" data-translate="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_description">${product.description}</p>
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
                 <div class="product-price">${product.price} BYN</div>
                 <div class="product-actions">
                 <div class="product-rating">★ ${product.rating}</div>
@@ -171,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupProductActions();
     }
     
-   function setupProductActions() {
+    function setupProductActions() {
         document.querySelectorAll('.favorite-btn').forEach(btn => {
             btn.addEventListener('click', async (e) => {
                 e.preventDefault();

@@ -83,34 +83,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function createProductCard(product, quantity, isFavorite) {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    card.innerHTML = `
-        <img src="${product.pass}" alt="${product.name}" data-translate-alt="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_name" class="product-image">
-        <div class="product-info">
-        <span class="product-category" data-translate="category_${product.category.toLowerCase()}">${product.category}</span>
-        <h3 class="product-name" data-translate="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_name">${product.name}</h3>
-        <p class="product-description" data-translate="product_${product.name.toLowerCase().replace(/[\s+&.\/]/g, '_')}_description">${product.description}</p>
-        <div class="product-price">${product.price} BYN</div>
-        <div class="product-actions">
-            <div class="product-rating">★ ${product.rating}</div>
-            <div class="action-buttons">
-            <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-product-id="${product.id}">
-                <img src="/images_foote_header/heart.svg" alt="Избранное" data-translate-alt="favorite_alt">
-            </button>
-            <div class="quantity-controls">
-                <button class="decrease-quantity" data-product-id="${product.id}">-</button>
-                <span class="quantity">${quantity}</span>
-                <button class="increase-quantity" data-product-id="${product.id}">+</button>
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <img src="${product.pass}" alt="${product.name}" class="product-image">
+            <div class="product-info">
+                <span class="product-category" data-translate="category_${product.category.toLowerCase()}">${product.category}</span>
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <div class="product-price">${product.price} BYN</div>
+                <div class="product-actions">
+                    <div class="product-rating">★ ${product.rating}</div>
+                    <div class="action-buttons">
+                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-product-id="${product.id}">
+                            <img src="/images_foote_header/heart.svg" alt="Избранное" data-translate-alt="favorite_alt">
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="decrease-quantity" data-product-id="${product.id}">-</button>
+                            <span class="quantity">${quantity}</span>
+                            <button class="increase-quantity" data-product-id="${product.id}">+</button>
+                        </div>
+                        <button class="cart-btn" data-product-id="${product.id}" disabled>
+                            <img src="/images_foote_header/shopping-cart.svg" alt="Корзина" data-translate-alt="cart_alt">
+                        </button>
+                    </div>
+                </div>
             </div>
-            <button class="cart-btn" data-product-id="${product.id}" disabled>
-                <img src="/images_foote_header/shopping-cart.svg" alt="Корзина" data-translate-alt="cart_alt">
-            </button>
-            </div>
-        </div>
-        </div>
-    `;
-    return card;
+        `;
+        return card;
     }
     
     function setupEventListeners() {

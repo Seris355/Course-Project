@@ -43,9 +43,7 @@ const translations = {
     // Admin catalog page (dynamic elements)
     new_product: "Новый товар",
     placeholder_product_id: "ID продукта (уникальный)",
-    placeholder_product_name: "Название",
     placeholder_product_price: "Цена",
-    placeholder_product_description: "Описание",
     placeholder_product_rating: "Рейтинг",
     placeholder_product_image: "Путь к изображению",
     button_delete_product: "Удалить товар",
@@ -60,7 +58,9 @@ const translations = {
     notification_delete_error: "Ошибка при удалении товара",
     notification_changes_saved: "Изменения успешно сохранены",
     notification_save_error: "Ошибка при сохранении изменений",
-    notification_id_exists: "ID %s уже существует"
+    notification_id_exists: "ID %s уже существует",
+    notification_invalid_price: "Цена должна быть неотрицательным числом",
+    notification_invalid_rating: "Рейтинг должен быть от 0 до 5"
   },
   en: {
     // Header
@@ -81,7 +81,7 @@ const translations = {
     footer_hours_weekends: "11:00 AM - 8:00 PM (Sat-Sun)",
     footer_instagram: "We’re on Instagram",
     footer_copyright: "Copyright © 2017 - 2022",
-    // Admin catalog page (static elements)
+    // Admin catalog page 
     search_placeholder: "Search...",
     search_button: "Search",
     filter_category_label: "Category:",
@@ -103,12 +103,10 @@ const translations = {
     no_results: "No products found",
     button_save_changes: "Save Changes",
     button_add_product: "Add Product",
-    // Admin catalog page (dynamic elements)
+    // Admin catalog page 
     new_product: "New Product",
     placeholder_product_id: "Product ID (unique)",
-    placeholder_product_name: "Name",
     placeholder_product_price: "Price",
-    placeholder_product_description: "Description",
     placeholder_product_rating: "Rating",
     placeholder_product_image: "Image Path",
     button_delete_product: "Delete Product",
@@ -123,6 +121,8 @@ const translations = {
     notification_delete_error: "Error deleting product",
     notification_changes_saved: "Changes successfully saved",
     notification_save_error: "Error saving changes",
-    notification_id_exists: "ID %s already exists"
+    notification_id_exists: "ID %s already exists",
+    notification_invalid_price: "Price must be a non-negative number",
+    notification_invalid_rating: "Rating must be between 0 and 5"
   }
 };

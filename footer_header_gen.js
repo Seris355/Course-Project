@@ -52,7 +52,7 @@ document.getElementById('header-container').innerHTML = `
     </div>
     <div class="header_second_line">
       <nav class="h_nav_2">
-            <img src="/images_foote_header/eye.svg" alt="icon blind" class="h_2nd" id="delet">
+            <a href="/blind_page/blind.html" class=""><img src="/images_foote_header/eye.svg" alt="icon blind" class="h_2nd"></a>
             <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
                 <img src="/images_foote_header/globe.svg" alt="translate" class="h_2nd">
             </button>

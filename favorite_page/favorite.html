@@ -4,21 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kursavik</title>
-    <link rel="stylesheet" href="/loader_style.css">
     <link rel="stylesheet" href="/normalise_css.css">
     <link rel="stylesheet" href="/header and footer styles.css" />
+    <link rel="stylesheet" href="/styles_for_white_theme.css" />
     <link rel="stylesheet" href="/shop_page/shop_style.css" />
-        <link rel="stylesheet" href="/styles_for_white_theme.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   </head>
-
   <body>
     <div class="mask">
       <div class="loader"></div>
@@ -32,13 +26,20 @@
           <p data-translate="no_results">В избранном пока нет товаров</p>
         </div>
       </div>
+      <div class="order-summary" id="order-summary">
+        <div class="total-price" id="total-price" data-translate="total_price">Итого: 0 BYN</div>
+        <button class="primary-btn" id="add-to-cart-btn" data-translate="add_to_cart_button">Добавить в корзину</button>
+      </div>
+      <div class="order-success" id="order-success">
+        <p data-translate="add_to_cart_success">Товары успешно добавлены в корзину! Стоимость: <span id="final-price">0</span> BYN</p>
+      </div>
     </main>
     <footer id="footer-container" class="footer"></footer>
     <script src="favorite.js"></script>
     <script src="/footer_header_gen.js"></script>
     <script src="/loader.js"></script>
-     <script src="/toggle_theme.js"></script>
-     <script src="favorite_trans.js"></script>
+    <script src="/toggle_theme.js"></script>
+    <script src="favorite_trans.js"></script>
     <script src="/translate.js"></script>
   </body>
 </html>

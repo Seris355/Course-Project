@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kursavik</title>
+    
+    <link rel="stylesheet" href="/normalise_css.css">
+    <link rel="stylesheet" href="blind.css">
+    <link rel="stylesheet" href="/shop_page/shop_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+<body>
+    <div class="accessibility-panel">
+        <div class="font-size-controls">
+            <button class="font-size-btn" data-size="small">Маленький шрифт</button>
+            <button class="font-size-btn" data-size="medium">Средний шрифт</button>
+            <button class="font-size-btn" data-size="large">Большой шрифт</button>
+        </div>
+        <div class="color-scheme-controls">
+            <button class="color-scheme-btn" data-scheme="black-white">Чёрный фон, белый текст</button>
+            <button class="color-scheme-btn" data-scheme="black-green">Чёрный фон, зелёный текст</button>
+            <button class="color-scheme-btn" data-scheme="white-black">Белый фон, чёрный текст</button>
+        </div>
+        <button class="toggle-images">Отключить/включить изображения</button>
+        <button class="fall-back"> <a href="/main_page/main.html">Вернуть как было</a></button>
+    </div>
+    <main>
+        <section id="home">
+            <h1>Салон красоты «Delote-Beauty» на Крест</h1>
+            <p>Добро пожаловать в салон красоты – место, где рождается ваша неповторимая красота! Наши мастера – настоящие волшебники, способные подчеркнуть вашу природную красоту и создать образ, который будет вызывать восхищение.</p>
+        </section>
+        <section id="services">
+            <h2>Услуги</h2>
+            <ul>
+                <li>Парикмахерские услуги</li>
+                <li>Маникюр</li>
+                <li>Педикюр</li>
+                <li>Косметология</li>
+                <li>Эстетист по телу</li>
+                <li>Визаж</li>
+            </ul>
+        </section>
+        <section id="works">
+            <h2>Наши работы</h2>
+            <div class="image-placeholder" style="display: none;">Изображения отключены</div>
+            <div class="image-gallery">
+                <img src="/main_page/slider_images/s_1.png" alt="Работа 1">
+                <img src="/main_page/slider_images/s_2.png" alt="Работа 2">
+                <img src="/main_page/slider_images/s_3.png" alt="Работа 3">
+            </div>
+        </section>
+        <section id="partners">
+            <h2>Партнёры</h2>
+            <div class="image-placeholder" style="display: none;">Изображения отключены</div>
+            <div class="partner-logos">
+                <img src="/main_page/images/partner1.png" alt="Партнёр 1">
+                <img src="/main_page/images/partner2.png" alt="Партнёр 2">
+                <img src="/main_page/images/partner3.png" alt="Партнёр 3">
+                <img src="/main_page/images/partnrer4.png" alt="Партнёр 4">
+            </div>
+        </section>
+    </main>
+    <script src="blind.js"></script>
+</body>
+</html>
