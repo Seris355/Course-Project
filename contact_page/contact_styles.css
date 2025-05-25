@@ -4,7 +4,7 @@
     margin-bottom: 5rem;
 }
 .flex{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -87,3 +87,34 @@
         gap: 2vw;
     }
  }
+.map-container {
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto; 
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+.map-iframe {
+    width: 100%;
+    height: 450px; 
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .map-container {
+        max-width: 100%;
+    }
+    
+    .map-iframe {
+        height: 400px; 
+    }
+}
+
+
+@media (max-width: 320px) {
+    .map-iframe {
+        height: 300px; 
+    }
+}
