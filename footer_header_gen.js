@@ -52,6 +52,9 @@ document.getElementById('header-container').innerHTML = `
     </div>
     <div class="header_second_line">
       <nav class="h_nav_2">
+            <button class="language-toggle" onclick="resetSettings()" aria-label="Toggle language">
+                 <img src="/images_foote_header/refresh-cw.svg" alt="reset configuration" class="h_2nd">
+            </button>
             <a href="/blind_page/blind.html" class=""><img src="/images_foote_header/eye.svg" alt="icon blind" class="h_2nd"></a>
             <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
                 <img src="/images_foote_header/globe.svg" alt="translate" class="h_2nd">
@@ -93,4 +96,24 @@ document.getElementById('footer-container').innerHTML = `
 function isAdmin() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     return currentUser && currentUser.nickname === 'admin' && currentUser.password === 'admin';
+}
+
+function resetSettings() {
+    localStorage.setItem("language", "ru");
+    localStorage.setItem("IsDark", "true");
+    document.body.classList.remove("light-theme");
+    const textElements = document.querySelectorAll("[data-translate]");
+    textElements.forEach(element => {
+        const key = element.getAttribute("data-translate");
+        if (translations["ru"] && translations["ru"][key]) {
+            element.textContent = translations["ru"][key];
+        }
+    });
+    const placeholderElements = document.querySelectorAll("[data-translate-placeholder]");
+    placeholderElements.forEach(element => {
+        const key = element.getAttribute("data-translate-placeholder");
+        if (translations["ru"] && translations["ru"][key]) {
+            element.placeholder = translations["ru"][key];
+        }
+    });
 }
