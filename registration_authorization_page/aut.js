@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const passwordInput = document.getElementById('password');
   const errorMessage = document.getElementById('errorMessage');
 
-  toggleLanguage(localStorage.getItem('language') || 'ru');
 
   loginForm.addEventListener('submit', async function(e) {
     e.preventDefault();

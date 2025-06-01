@@ -247,9 +247,11 @@ body{
 
 
 
-.header_inst:hover {
+.header_inst:hover,
+.header_profile_icon:hover,
+.h_2nd:hover{
   transition: transform 0.3s ease; 
-  transform: scale(1.05); 
+  transform: scale(1.07); 
 }
 
 .logo_header {
@@ -372,3 +374,5 @@ body{
       display: inline-flex;
       align-items: center;
     }
+
+

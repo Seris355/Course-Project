@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let isGeneratedPassword = false;
   let users = [];
 
-  toggleLanguage(localStorage.getItem('language') || 'ru');
 
   async function loadUsers() {
     try {
@@ -114,6 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function validatePassword(password) {
     const language = localStorage.getItem('language') || 'ru';
+
+    if (commonPasswords.includes(password.toLowerCase())) {
+      return 'error_password_common';
+    }
+    
     if (password.length < 8 || password.length > 20) {
       return 'error_password_length';
     }
@@ -134,9 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return 'error_password_no_special';
     }
 
-    if (commonPasswords.includes(password.toLowerCase())) {
-      return 'error_password_common';
-    }
+    
 
     return '';
   }

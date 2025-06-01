@@ -16,7 +16,7 @@
     },
     {
       "id": 1747115758570,
-      "fio": "Сидаренко Илья",
+      "fio": "Славченко Илья",
       "nickname": "GentleBear75",
       "password": "8U{}nWf)-3",
       "phone": "+375291328355",
@@ -106,10 +106,10 @@
   "products": [
     {
       "id": "1",
-      "name": "ффф",
-      "price": 999999,
+      "name": "",
+      "price": 999,
       "category": "Face",
-      "description": "Крем-пудра с тонирующвцвццвим эффектом",
+      "description": "Крем-цвццвим эффектом",
       "rating": 5,
       "pass": "/shop_page/shop_images/prod1.jpg"
     },

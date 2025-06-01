@@ -20,6 +20,8 @@ function toggleLanguage() {
       element.placeholder = translations[newLanguage][key];
     }
   });
+
+  
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -42,3 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+

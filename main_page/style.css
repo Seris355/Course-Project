@@ -228,10 +228,13 @@ header {
 }
 
 .product_card:hover{
+
   transition: transform 0.3s ease; 
   transform: scale(1.03); 
   
 }
+
+
 
 
 
@@ -297,6 +300,8 @@ header {
     object-fit: cover;
     flex-shrink: 0;
 }
+
+
 
 .arrow {
     width: 8vw;
