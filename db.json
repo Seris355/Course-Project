@@ -373,6 +373,15 @@
       "description": "Крем-краска для волос тонирующая безаммиачная",
       "rating": 4.8,
       "pass": "/shop_page/shop_images/prod30.png"
+    },
+    {
+      "id": "770196",
+      "name": "Chuchhella",
+      "price": 123,
+      "category": "Body",
+      "description": "awdawd",
+      "rating": 4.5,
+      "pass": "/shop_page/shop_images/prod1.jpg"
     }
   ],
   "orders": [

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorSchemeButtons = document.querySelectorAll('.color-scheme-btn');
     const toggleImagesButton = document.querySelector('.toggle-images');
     const toggleMenuButton = document.querySelector('.toggle-menu');
+    const closeMenuButton = document.querySelector('.close-btn');
     const menu = document.querySelector('.menu');
     let imagesVisible = true;
 
@@ -27,6 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     toggleMenuButton.addEventListener('click', () => {
-        menu.classList.toggle('active');
+        menu.classList.add('active');
+        document.body.classList.add('no-scroll');
+    });
+
+    closeMenuButton.addEventListener('click', () => {
+        menu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    });
+
+    menu.addEventListener('click', (event) => {
+        if (event.target === menu) {
+            menu.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
     });
 });

@@ -8,21 +8,25 @@ body {
     font-size: 14px; 
 }
 
-.accessibility-panel {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-
-    top: 0;
-    z-index: 1000;
+body.no-scroll {
+    overflow: hidden;
 }
 
-.accessibility-panel button {
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1001;
+}
+
+.toggle-menu {
     padding: 8px 16px;
+    height: 48px;
     font-size: 1rem;
     cursor: pointer;
     border: 1px solid #fff;
@@ -37,33 +41,51 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #333;
+    background: rgba(0, 0, 0, 0.9);
     z-index: 2000;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-}
-
-.menu li {
-    margin: 20px 0;
-}
-
-.menu a {
+.accessibility-panel {
+    background: #333;
     color: #fff;
-    font-size: 1.2rem;
-    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.accessibility-panel button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background: #555;
+    color: #fff;
+}
+
+.menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .menu.active {
-    display: block;
+    display: flex;
 }
 
 main {
     max-width: 80ch;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 20px;
 }
 
@@ -147,6 +169,30 @@ ul {
     }
     .accessibility-panel {
         flex-direction: column;
+        align-items: center;
+    }
+    .toggle-menu {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 806px) {
+    .accessibility-panel {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .font-size-controls,
+    .color-scheme-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
         align-items: center;
     }
 }
