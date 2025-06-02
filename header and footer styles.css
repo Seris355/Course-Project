@@ -376,3 +376,11 @@ body{
     }
 
 
+    .counter {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.9em;
+    color: #ff5555; 
+    font-weight: bold;
+}
+

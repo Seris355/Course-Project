@@ -77,7 +77,10 @@
       "registrationDate": "2025-05-12T19:30:17.951Z",
       "favorite": [
         "6",
-        "7"
+        "7",
+        "1",
+        "3",
+        "2"
       ]
     },
     {
@@ -432,11 +435,11 @@
       "items": [
         {
           "product_id": "2",
-          "quantity": 1
+          "quantity": 3
         },
         {
           "product_id": "3",
-          "quantity": 1
+          "quantity": 6
         },
         {
           "product_id": "1",

@@ -1,4 +1,5 @@
-document.getElementById('header-container').innerHTML = `
+async function generateHeader() {
+    const headerHTML = `
     <div class="h_items">
         <a href="https://www.instagram.com/" class="inst_link"><img src="/images_foote_header/insta.svg" alt="instagram link" class="header_inst"></a>
         
@@ -61,13 +62,17 @@ document.getElementById('header-container').innerHTML = `
             </button>
             <a href="/registration_authorization_page/aut.html" class="header_profile_icon_2_link"><img src="/images_foote_header/log-out.svg" alt="logo picture" class="h_2nd"></a>
             <img src="/images_foote_header/sun-moon.svg" alt="Toggle theme" class="h_2nd theme-toggle" id="theme-toggle">
-            <a href="/favorite_page/favorite.html" class="" id="delet"><img src="/images_foote_header/heart.svg" alt="favorite" class="h_2nd" ></a>
+            <a href="/favorite_page/favorite.html" class="" id="delet"><img src="/images_foote_header/heart.svg" alt="favorite" class="h_2nd"></a>
         </nav>
     </div>
     <hr>
-`;
+    `;
 
-document.getElementById('footer-container').innerHTML = `
+    document.getElementById('header-container').innerHTML = headerHTML;
+    await updateHeaderCounters();
+}
+function generateFooter() {
+    document.getElementById('footer-container').innerHTML = `
     <hr>
     <ul class="f_list">
         <li class="logo_footer" id="delet"><a href="/main_page/main.html"><img src="/images_foote_header/logo2.svg" alt="logo footer" class="footer_logo"></a></li>
@@ -91,7 +96,86 @@ document.getElementById('footer-container').innerHTML = `
     </ul>
     <hr>
     <p class="footer_copy" data-translate="footer_copyright">Copyright © 2017 - 2022</p>
-`;
+    `;
+}
+
+async function getCartItemsCount() {
+    try {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) return 0;
+
+        const response = await fetch('http://localhost:3000/orders');
+        const orders = await response.json();
+        
+        let totalItems = 0;
+        orders.forEach(order => {
+            if (order.user_id === currentUser.id) {
+                order.items.forEach(item => {
+                    totalItems += item.quantity;
+                });
+            }
+        });
+        
+        return totalItems;
+    } catch (error) {
+        console.error('Error fetching cart items:', error);
+        return 0;
+    }
+}
+
+async function getFavoriteItemsCount() {
+    try {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) return 0;
+
+        const response = await fetch('http://localhost:3000/users');
+        const users = await response.json();
+        
+        const user = users.find(u => u.id === currentUser.id);
+        if (user && user.favorite) {
+            return user.favorite.length;
+        }
+        
+        return 0;
+    } catch (error) {
+        console.error('Error fetching favorite items:', error);
+        return 0;
+    }
+}
+async function updateHeaderCounters() {
+    const cartCount = await getCartItemsCount();
+    const favoriteCount = await getFavoriteItemsCount();
+    let cartLink = document.querySelector('a[href="/busket_page/busket.html"]');
+    if (cartLink) {
+        const oldCounter = cartLink.querySelector('.counter');
+        if (oldCounter) {
+            oldCounter.remove();
+        }
+        if (cartCount > 0) {
+            const counter = document.createElement('span');
+            counter.className = 'counter';
+            counter.textContent = cartCount;
+            cartLink.appendChild(counter);
+        }
+    }
+    let favoriteLink = document.querySelector('a[href="/favorite_page/favorite.html"]');
+    if (!favoriteLink) {
+        favoriteLink = document.querySelector('#delet a[href="/favorite_page/favorite.html"]');
+    }
+    
+    if (favoriteLink) {
+        const oldCounter = favoriteLink.querySelector('.counter');
+        if (oldCounter) {
+            oldCounter.remove();
+        }
+        if (favoriteCount > 0) {
+            const counter = document.createElement('span');
+            counter.className = 'counter';
+            counter.textContent = favoriteCount;
+            favoriteLink.appendChild(counter);
+        }
+    }
+}
 
 function isAdmin() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -117,3 +201,14 @@ function resetSettings() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', async function() {
+    await generateHeader();
+    generateFooter();
+    window.addEventListener('storage', async function() {
+        await updateHeaderCounters();
+    });
+    setInterval(async () => {
+        await updateHeaderCounters();
+    }, 500);
+});
