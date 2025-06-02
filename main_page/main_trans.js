@@ -26,7 +26,11 @@ const translations = {
     service_cosmetology: "Косметология",
     service_body: "Эстетист по телу",
     service_makeup: "Визаж",
-    our_works: "Наши работы"
+    our_works: "Наши работы",
+    //media
+    media_name: "Медиа-Галерея",
+    random_image: "Случайное изображение",
+    show_video: "Показать видео"
   },
   en: {
     // Header
@@ -55,6 +59,10 @@ const translations = {
     service_cosmetology: "Cosmetology",
     service_body: "Body Esthetician",
     service_makeup: "Makeup",
-    our_works: "Our Works"
+    our_works: "Our Works",
+    //media
+    media_name: "Media-Galery",
+    random_image: "Random image",
+    show_video: "Show Video"
   }
 };
